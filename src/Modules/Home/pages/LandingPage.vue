@@ -1,14 +1,18 @@
 <template>
   <navbar></navbar>
- <footer></footer>
+  <slider></slider>
+  <footer></footer>
 </template>
 
 <script setup>
 
-import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+import Navbar from '../components/Navbar.vue';
+import Slider from '../components/Slider.vue';
 
-components: { Navbar,Footer }
+
+
+components: { Navbar,Slider,Footer }
 </script>
 
 <style>
