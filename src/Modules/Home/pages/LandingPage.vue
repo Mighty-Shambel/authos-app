@@ -1,18 +1,23 @@
 <template>
   <navbar></navbar>
   <slider></slider>
-  <footer></footer>
+  <about></about>
+  <contactus></contactus>
+  <my-footer></my-footer>
 </template>
 
 <script setup>
 
-import Footer from '../components/Footer.vue';
-import Navbar from '../components/Navbar.vue';
-import Slider from '../components/Slider.vue';
+import Navbar from '../../../components/Navbar.vue';
+import Slider from '../../../components/Slider.vue';
+import MyFooter from '../../../components/MyFooter.vue';
+import About from './About.vue';
+import Contactus from './Contactus.vue';
 
 
 
-components: { Navbar,Slider,Footer }
+
+components: { Navbar,Slider,MyFooter,About,Contactus }
 </script>
 
 <style>

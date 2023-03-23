@@ -4,8 +4,8 @@
 </template>
 
 <script setup>
-import Navbar from '../../Home/components/Navbar.vue';
-import Blog from '../components/Blog.vue';
+import Navbar from '../../../components/Navbar.vue';
+import Blog from '../../../components/Blog.vue';
 Navbar,Blog
 </script>
 

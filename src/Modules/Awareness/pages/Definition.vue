@@ -8,7 +8,7 @@
     <img src="/src/assets/auth.webp" class="lg:pt-24">
   </div>
   <div class =" lg:pl-10">
-    <h1 class="text-xl font-semibold pb-2 pt-10 ">What is Autism ?</h1>
+    <h1 class="text-xl font-semibold pb-2 pt-10 ">What is Autism </h1>
   <p class="text-black">Autism is also known as Autism Spectrum <br>Disorder (ASD). ‘Spectrum’
      refers to Autism is also known as Autism Spectrum Disorder (ASD). ‘Spectrum’ refers to the wide range of characteristics, skills and abilities that different people with Autism have. No two people are affected by Autism in exactly the same way. Every person experiences Autism differently and has different support needs. Although the core characteristics of Autism can cause a range of challenges, it is important to recognise that they can also result in unique skills and capabilities.
      While Autism is a life-long condition, with appropriate and tailored support, children and Adults with Autism can make significant progress and live fulfilling lives. Consequently, it is imperative that people with Autism have access to specialist services that understand their needs and are experienced in developing their skills and strengths. </p>
@@ -65,11 +65,20 @@
     </div>
     <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
       <div>
+        <img src="/src/assets/sugar.jpeg" class="rounded-md">
+      </div>
+    <div class="pt-2 pr-2">
+      <h1 class="  pl-5"><router-link :to="{name:'NotRecomended'}">Not Recomended Food</router-link></h1>
+    <p class="text-slate-500 pl-5">Dietary supplements have been proven to be very...</p>
+    </div>
+    </div>
+    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
+      <div>
         <img src="/src/assets/doctors.jpg" class="rounded-md">
       </div>
     <div class="pt-2 pr-2">
       <h1 class="  pl-5"><router-link :to="{name:'Doctors'}">Doctor Recomendations</router-link></h1>
-    <p class="text-slate-500 pl-5">There are some doctors currently working on autism in diffrent corner</p>
+    <p class="text-slate-500 pl-5">There are some doctors currently working on ...</p>
     </div>
     </div>
     <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
@@ -77,8 +86,8 @@
         <img src="/src/assets/organization.jpg" class="rounded-md">
       </div>
     <div class="pt-2 pr-2">
-      <h1 class="  pl-5"><router-link :to="{name:'Organization'}">Organization Recomendations</router-link></h1>
-    <p class="text-slate-500 pl-5">Autism Centers are mainly located in certain areas</p>
+      <h1 class="  pl-5"><router-link :to="{name:'OrganizationRec'}">Organization Recomendations</router-link></h1>
+    <p class="text-slate-500 pl-5">Autism Centers are mainly located in...</p>
     </div>
     </div>
 </div>
@@ -87,7 +96,7 @@
 </template>
 
 <script setup>
-import Navbar from '../../Home/components/Navbar.vue';
+import Navbar from '../../../components/Navbar.vue';
 Navbar
 </script>
 
