@@ -45,9 +45,11 @@ import CreateSymptom from "../Modules/Dashboard/Admin/System/CreateSymptom.vue";
 import SystemUpdate from "../Modules/Dashboard/Admin/System/SystemUpdate.vue";
 import UserList from "../Modules/Dashboard/Admin/UserList.vue";
 import AssignModerator from "../Modules/Dashboard/Admin/AssignModerator.vue";
-import ReportAdmin from "../Modules/Dashboard/Admin/ReportAdmin.vue";
 import VerificationAdmin from "../Modules/Dashboard/Admin/VerificationAdmin.vue";
-import ReportDetailsAdmin from "../Modules/Dashboard/Admin/ReportDetailsAdmin.vue";
+import ReportDropdown from "../Modules/Dashboard/Admin/Report/ReportDropdown.vue"
+import ReportProfile from "../Modules/Dashboard/Admin/Report/ReportProfile.vue"
+import ReportComment from "../Modules/Dashboard/Admin/Report/ReportComment.vue"
+import ReportPost from "../Modules/Dashboard/Admin/Report/ReportPost.vue"
 import EditAdmin from "../Modules/Dashboard/Admin/EditAdmin.vue"
 import LoginAdmin from "../Modules/Dashboard/Admin/LoginAdmin.vue"
 
@@ -268,19 +270,29 @@ const router = createRouter({
       component: AssignModerator,
     },
     {
-      path: "/reportadmin",
-      name: "ReportAdmin",
-      component: ReportAdmin,
-    },
-    {
       path: "/verificationadmin",
       name: "VerificationAdmin",
       component: VerificationAdmin,
     },
     {
-      path: "/reportdetailsadmin",
-      name: "ReportDetailsAdmin",
-      component: ReportDetailsAdmin,
+      path:"/reportdropdown",
+      name:"ReportDropdown",
+      component:ReportDropdown
+    },
+    {
+      path:"/reportprofile",
+      name:"ReportProfile",
+      component:ReportProfile
+    },
+    {
+      path:"/reportpost",
+      name:"ReportPost",
+      component:ReportPost
+    },
+    {
+      path:"/reportcomment",
+      name:"ReportComment",
+      component:ReportComment
     },
     {
       path: "/editadmin",
