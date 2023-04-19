@@ -15,14 +15,12 @@
             <input type="hidden" name="remember" value="true" />
             <div class=" rounded-md shadow-sm mb-20">
               <div class="pb-2" >
-                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-                <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
+               <base-input 
+               type="email"
+               label="Email"
+               />
               </div>
-              
             </div>
-    
-           
-    
             <div>
               <button type="submit" class="mb-20 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -44,17 +42,15 @@
             <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Forgot password</h2>
           </div>
           <form class="mt-8 space-y-5" action="#" method="POST">
-            <input type="hidden" name="remember" value="true" />
             <div class=" rounded-md shadow-sm mb-3">
               <div class="pb-2" >
-                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-                <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
+                <base-input
+                label="Email"
+                type="email"
+                />
               </div>
             </div>
-    
             <div class="flex items-center justify-between"> 
-              
-    
               <!-- <div class="text-sm">
                 <p  class="font-medium text-black hover:text-indigo-500"><router-link :to="{name:'forgotpassword'}"> forgot your password?</router-link> </p>
               </div> -->
@@ -73,11 +69,9 @@
         </div>
       </div>
     </template>
-    
+
     <script setup>
+     import BaseInput from '../../../components/BaseInput.vue';
      import Socialmedia from '../../../components/Socialmedia.vue';
     </script>
-    
-    <style>
-    
-    </style>
+   

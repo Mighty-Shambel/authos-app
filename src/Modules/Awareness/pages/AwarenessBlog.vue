@@ -1,5 +1,4 @@
 <template>
-  <navbar></navbar>
   <blog></blog>
 </template>
 

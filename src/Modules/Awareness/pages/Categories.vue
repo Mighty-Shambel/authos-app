@@ -1,5 +1,4 @@
 <template>
-  <navbar></navbar>
   <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:flex "> 
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-10 rounded-lg p-5 pt-5">
@@ -7,7 +6,7 @@
   <div>
     <img src="/src/assets/categories.jpg" class="lg:pt-24">
   </div>
-  <div class =" lg:pl-10">
+  <div class=" lg:pl-10">
     <h1 class="text-xl font-semibold pb-2 pt-10 ">Categories of Autism </h1>
     <p class="text-black">
     1.Asperger’s Syndrome:Although the term Asperger’s syndrome was quite common before 2013, the term is actually no longer used by medical professionals. It has since been reclassified as level 1 autism spectrum disorder by the DSM-5 diagnostic manual. Still, Asperger’s syndrome may be used informally — in fact, autism communities use it more often than level 1 spectrum disorder.<br>

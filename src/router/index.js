@@ -5,6 +5,7 @@ import About from "../Modules/Home/pages/About.vue";
 import Contactus from "../Modules/Home/pages/Contactus.vue";
 import Privacypolicy from "../Modules/Home/pages/Privacypolicy.vue";
 import Termsofuse from "../Modules/Home/pages/Termsofuse.vue";
+import HomeLayout from '../Layouts/HomeLayout.vue'
 
 //Communication pages
 import Signin from "../Modules/Communication/Auth/Signin.vue";
@@ -31,7 +32,8 @@ import NotRecomended from "../Modules/Awareness/pages/NotRecomended.vue";
 import OrganizationRec from "../Modules/Awareness/pages/OrganizationRec.vue";
 import Recomended from "../Modules/Awareness/pages/Recomended.vue";
 import Symptom from "../Modules/Awareness/pages/Symptom.vue";
-
+import AwarenessLayout from '../Layouts/AwarenessLayout.vue'
+import CommunicationLayout from '../Layouts/CommunicationLayout.vue'
 //Admin pages
 import AdminDashboard from "../Modules/Dashboard/Admin/AdminDashboard.vue";
 import CreateCategories from "../Modules/Dashboard/Admin/System/CreateCategories.vue";
@@ -66,6 +68,12 @@ const router = createRouter({
     //home pages
     {
       path: "/",
+      name:PublicKeyCredential,
+      component:HomeLayout,
+      redirect:'/',
+      children:[
+        {
+      path:'/',
       name: "LandingPage",
       component: LandingPage,
     },
@@ -91,7 +99,14 @@ const router = createRouter({
       name: "Contactus",
       component: Contactus,
     },
-
+  ]
+},
+{
+  path: "/",
+  name:PublicKeyCredential,
+  component:AwarenessLayout,
+  redirect:'/',
+  children:[
     //Awareness pages
     {
       path: "/awarenessblog",
@@ -138,6 +153,8 @@ const router = createRouter({
       name: "Symptom",
       component: Symptom,
     },
+  ]
+},
     //communication pages
     {
       path: "/signin",
@@ -175,24 +192,15 @@ const router = createRouter({
       component: ForgotPassword,
     },
     {
-      path: "/chat",
-      name: "Chat",
-      component: Chat,
-    },
+      path: "/",
+      name:PublicKeyCredential,
+      component:CommunicationLayout,
+      redirect:'/',
+      children:[
     {
       path: "/feed",
       name: "Feed",
       component: Feed,
-    },
-    {
-      path: "/notification",
-      name: "Notification",
-      component: Notification,
-    },
-    {
-      path: "/profile",
-      name: "Profile",
-      component: Profile,
     },
     {
       path: "/friends",
@@ -200,10 +208,29 @@ const router = createRouter({
       component: Friends,
     },
     {
+      path: "/notification",
+      name: "Notification",
+      component: Notification,
+    },
+    {
       path: "/chatlist",
       name: "ChatList",
       component: ChatList,
     },
+    {
+      path: "/chat",
+      name: "Chat",
+      component: Chat,
+    },
+    {
+      path: "/profile",
+      name: "Profile",
+      component: Profile,
+    },
+  ],
+},
+   
+   
 
 
 

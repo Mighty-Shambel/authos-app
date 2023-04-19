@@ -1,26 +1,4 @@
 <template>
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-gray-50">
-  <body class="h-full">
-  ```
--->
 
 <div class="shadow md flex min-h-full items-center justify-center py-10 sm:px-6 lg:px-8">
   <div class="w-full max-w-md space-y-8 ">
@@ -32,16 +10,22 @@
       <input type="hidden" name="remember" value="true">
       <div class="-space-y-px rounded-md shadow-sm">
         <div class="pb-2">
-          <label for="company-name">Company Name</label>
-          <input id="company-name" name="company-name" type="text" autocomplete="text" required class=" mt-1 relative block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Company name">
+          <base-input 
+          type="text"
+          label="Company Name"
+          />
         </div>
         <div class="pb-2">
-          <label for="email-address" >Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="mt-1 relative block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email address">
+          <base-input 
+          type="email"
+          label="Email"
+          />
         </div>
         <div class="pb-2">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="number" autocomplete="phone" required class="mt-1 relative block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Phone">
+         <base-input 
+         type="number"
+         label="Phone"
+         />
         </div>
         <div >
           <label for="desc">Description</label>
@@ -75,10 +59,7 @@
 </template>
 
 <script setup>
+import BaseInput from '../../../components/BaseInput.vue';
 import Navbar from '../../../components/Navbar.vue';
 Navbar
 </script>
-
-<style>
-
-</style>

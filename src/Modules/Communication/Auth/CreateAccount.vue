@@ -22,42 +22,22 @@
             <input type="hidden" name="remember" value="true" />
             <div class="-space-y-px rounded-md shadow-sm">
               <div class="pb-2">
-                <label
-                  for="phone"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email_address"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="email"
-                  required
-                />
+               <base-input 
+               type="email"
+               label="Email"
+               />
               </div>
               <div class="pb-2 mb-3">
-                <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Password</label
-                >
-                <input
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="password"
-                  required
+                <base-input
+                type="password"
+                label="Password"
                 />
               </div>
               <div class="pb-2 mb-2">
-                <label
-                  for="confirm_password"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Confirm Password</label
-                >
-                <input
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="password"
-                  required
-                />
+               <base-input 
+               type="password"
+               label="Confirm Password"
+               />
               </div>
               <label
                 for="countries"
@@ -118,42 +98,22 @@
         <input type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm">
           <div class="pb-2">
-            <label
-              for="phone"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email_address"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="email"
-              required
-            />
+          <base-input 
+          type="email"
+          label="Email"
+          />
           </div>
           <div class="pb-2 mb-3">
-            <label
-              for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Password</label
-            >
-            <input
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="password"
-              required
-            />
+           <base-input 
+           type="password"
+           label="Password"
+           />
           </div>
           <div class="pb-2 mb-2">
-            <label
-              for="confirm_password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Confirm Password</label
-            >
-            <input
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="password"
-              required
-            />
+           <base-input 
+           type="password"
+           label="Confirm Password"
+           />
           </div>
           <label
             for="countries"
@@ -198,9 +158,7 @@
   </div>
 </template>
     
-    <script setup>
+<script setup>
+import BaseInput from "../../../components/BaseInput.vue";
 import Socialmedia from "../../../components/Socialmedia.vue";
 </script>
-    
-    <style>
-</style>

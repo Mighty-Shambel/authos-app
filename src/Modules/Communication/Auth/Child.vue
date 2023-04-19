@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 shadow-2xl">
       
          <socialmedia></socialmedia>
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-44 lg:pl-20 md:pt-10 bg-white  ">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-24 lg:pl-20 md:pt-10 bg-white  ">
         <div class="w-full max-w-md space-y-8">
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.25 4 5.75 6">
       <path d="M 2 4 C 1 4 1 5 2 5 C 1 5 1 6 2 6 C 1 6 1 7 2 7 C 1 7 1 8 2 8 C 1 8 1 9 2 9 C 1 9 1 10 2 10 M 7 5" fill=""/>
@@ -25,76 +25,15 @@
           <input type="hidden" name="remember" value="true" />
           <div class="-space-y-px rounded-md shadow-sm">
             <div class="pb-2">
-              <label
-                for="fname"
-                class="
-                  block
-                  mb-2
-                  text-sm
-                  font-medium
-                  text-gray-900
-                  dark:text-gray-300
-                "
-                >First name</label
-              >
-              <input
-                type="text"
-                id="first_name"
-                class="
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                placeholder="first name"
-                required
+              <base-input 
+              type="text"
+              label="First Name"
               />
             </div>
             <div class="pb-2">
-              <label
-                for="lname"
-                class="
-                  block
-                  mb-2
-                  text-sm
-                  font-medium
-                  text-gray-900
-                  dark:text-gray-300
-                "
-                >Last name</label
-              >
-              <input
-                type="text"
-                id="last_name"
-                class="
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                placeholder="last name"
-                required
-              />
+              <base-input 
+              type="text"
+              label="Last name"/>
             </div>
             <div>
               <label
@@ -265,75 +204,15 @@
           <input type="hidden" name="remember" value="true" />
           <div class="-space-y-px rounded-md shadow-sm">
             <div class="pb-2">
-              <label
-                for="fname"
-                class="
-                  block
-                  mb-2
-                  text-sm
-                  font-medium
-                  text-gray-900
-                  dark:text-gray-300
-                "
-                >First name</label
-              >
-              <input
-                type="text"
-                id="first_name"
-                class="
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                placeholder="first name"
-                required
+              <base-input
+              label="First Name"
+              type="text"
               />
             </div>
             <div class="pb-2">
-              <label
-                for="lname"
-                class="
-                  block
-                  mb-2
-                  text-sm
-                  font-medium
-                  text-gray-900
-                  dark:text-gray-300
-                "
-                >Last name</label
-              >
-              <input
-                type="text"
-                id="last_name"
-                class="
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                placeholder="last name"
-                required
+              <base-input
+              label="Last Name"
+              type="text"
               />
             </div>
             <div>
@@ -486,9 +365,7 @@
     </template>
     
     <script setup>
+     import BaseInput from '../../../components/BaseInput.vue';
      import Socialmedia from '../../../components/Socialmedia.vue';
     </script>
-    
-    <style>
-    
-    </style>
+   

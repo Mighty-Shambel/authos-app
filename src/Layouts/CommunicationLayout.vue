@@ -1,21 +1,19 @@
 <template>
     <div>
         <!-- Navigation bar code -->
-      <navbar></navbar>
+   <communication></communication>
       <main>
         <!-- Page content goes here -->
      <router-view></router-view>
       </main>
-        <!-- Footer code -->
-      <my-footer/>
+     
     </div>
   </template>
   
   <script>
-import MyFooter from '../components/MyFooter.vue';
-import Navbar from '../components/Navbar.vue';
+import Communication from '../components/Communication.vue';
   export default {
-  components: { MyFooter,Navbar },
+  components: { Communication},
     name: 'HomeLayout'
   };
   </script>

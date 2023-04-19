@@ -6,16 +6,13 @@
         <!-- Page content goes here -->
      <router-view></router-view>
       </main>
-        <!-- Footer code -->
-      <my-footer/>
     </div>
   </template>
   
   <script>
-import MyFooter from '../components/MyFooter.vue';
 import Navbar from '../components/Navbar.vue';
   export default {
-  components: { MyFooter,Navbar },
-    name: 'HomeLayout'
+  components: {Navbar },
+    name: 'AwarenessLayout'
   };
   </script>

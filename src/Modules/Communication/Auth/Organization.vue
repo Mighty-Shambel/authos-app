@@ -16,84 +16,26 @@
         <div class="-space-y-px rounded-md shadow-sm ">
           
           <div class="pb-2">
-            <label
-              for="oname"
-              class="
-                block
-                mb-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Organization name</label
-            >
-            <input
-              type="text"
-              id="org_name"
-              class="
-                bg-gray-50
-                border border-gray-300
-                text-gray-900 text-sm
-                rounded-lg
-                focus:ring-blue-500 focus:border-blue-500
-                block
-                w-full
-                p-2
-                dark:bg-gray-700
-                dark:border-gray-600
-                dark:placeholder-gray-400
-                dark:text-white
-                dark:focus:ring-blue-500
-                dark:focus:border-blue-500
-              "
-              placeholder="organization name"
-              required
+            <base-input 
+            label="Organization Name"
+            type="text"
             />
           </div>
           <div class="pb-2">
-            <label
-              for="address"
-              class="
-                block
-                mb-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Address</label
-            >
-            <input
-              type="text"
-              id="address"
-              class="
-                bg-gray-50
-                border border-gray-300
-                text-gray-900 text-sm
-                rounded-lg
-                focus:ring-blue-500 focus:border-blue-500
-                block
-                w-full
-                p-2
-                dark:bg-gray-700
-                dark:border-gray-600
-                dark:placeholder-gray-400
-                dark:text-white
-                dark:focus:ring-blue-500
-                dark:focus:border-blue-500
-              "
-              placeholder="address"
-              required
-            />
+          <base-input 
+          label="Address"
+          type="text"
+          />
           </div>
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
           <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
         </div>
         <div class="pb-2" >
-          <label for="bio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bio</label>
-          <input type="text" id="bio" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="bio" required>
+          <base-input 
+          type="text"
+          label="Bio"
+          />
         </div>
         <div class="pb-2">
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">License</label>
@@ -135,84 +77,26 @@
         <div class="-space-y-px rounded-md shadow-sm ">
           
           <div class="pb-2">
-            <label
-              for="oname"
-              class="
-                block
-                mb-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Organization name</label
-            >
-            <input
-              type="text"
-              id="org_name"
-              class="
-                bg-gray-50
-                border border-gray-300
-                text-gray-900 text-sm
-                rounded-lg
-                focus:ring-blue-500 focus:border-blue-500
-                block
-                w-full
-                p-2
-                dark:bg-gray-700
-                dark:border-gray-600
-                dark:placeholder-gray-400
-                dark:text-white
-                dark:focus:ring-blue-500
-                dark:focus:border-blue-500
-              "
-              placeholder="organization name"
-              required
-            />
+           <base-input
+           type="text"
+           label="Organization Name"
+           />
           </div>
           <div class="pb-2">
-            <label
-              for="address"
-              class="
-                block
-                mb-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Address</label
-            >
-            <input
-              type="text"
-              id="address"
-              class="
-                bg-gray-50
-                border border-gray-300
-                text-gray-900 text-sm
-                rounded-lg
-                focus:ring-blue-500 focus:border-blue-500
-                block
-                w-full
-                p-2
-                dark:bg-gray-700
-                dark:border-gray-600
-                dark:placeholder-gray-400
-                dark:text-white
-                dark:focus:ring-blue-500
-                dark:focus:border-blue-500
-              "
-              placeholder="address"
-              required
-            />
+            <base-input
+          label="Address"
+          type="text"  
+          />
           </div>
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
           <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
         </div>
         <div class="pb-2" >
-          <label for="bio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bio</label>
-          <input type="text" id="bio" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="bio" required>
+          <base-input 
+          type="text"
+          label="Bio"
+          />
         </div>
         <div class="pb-2">
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">License</label>
@@ -243,7 +127,8 @@
     </template>
     
     <script setup>
-     import Socialmedia from '../../../components/Socialmedia.vue';
+    import BaseInput from '../../../components/BaseInput.vue';
+    import Socialmedia from '../../../components/Socialmedia.vue';
     </script>
     
     <style>

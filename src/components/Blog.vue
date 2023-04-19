@@ -19,49 +19,46 @@
   </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:flex"> 
       <div class="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3 gap-10  rounded-lg  pt-10 p-10">
-  <div class="shadow md hover:border-2"><img src="/src/assets/auth.webp" class=" rounded-lg right-0 w-full pb-3 ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">What is Autism ?</h1>
-    <p class="text-slate-500 pl-5 pb-3">Autism is also known as Autism Spectrum <br>Disorder (ASD). ‘Spectrum’
-       refers to... </p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Definition'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/symptom.jpg" class="rounded-lg right-0 w-full pb-3 ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Symptoms of Autism</h1>
-    <p class="text-slate-500 pl-5 pb-3">There are some signs of Autstic people avoiding eye contact....</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Symptom'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/causes.jpeg" class="rounded-lg right-0 w-full pb-3  ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Cause of Autism</h1>
-    <p class="text-slate-500 pl-5 pb-3">Autism spectrum disorder has no single known cause. Given the complexity ...</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Causes'}">Read more</router-link></p>
-  </div>
-  
-  <div class="shadow md hover:border-2"><img src="/src/assets/categories.jpg" class="rounded-lg right-0 w-full pb-3  ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Categories of autism</h1>
-    <p class="text-slate-500 pl-5 pb-3">There are different types of autism, such as autistic disorder... </p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Categories'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/food.jpeg" class="rounded-lg right-0 w-full pb-3  ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Recomended Foods</h1>
-    <p class="text-slate-500 pl-5 pb-3">A healthy diet for people with autism means eating whole foods such as...</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Recomended'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/sugar.jpeg" class="rounded-lg right-0 w-full pb-3  ">
-    <h1 class="text-xl font-semibold pb-2 pl-5"> Not Recomended Foods</h1>
-    <p class="text-slate-500 pl-5 pb-3">A healthy diet for people with autism means eating whole foods such as...</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'NotRecomended'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/doctors.jpg" class="rounded-lg right-0 w-full pb-3  ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Doctor Recomendations</h1>
-    <p class="text-slate-500 pl-5 pb-3">There are some doctors currently working on autism in diffrent corner...</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'Doctors'}">Read more</router-link></p>
-  </div>
-  <div class="shadow md hover:border-2"><img src="/src/assets/organization.jpg" class="rounded-lg right-0 w-full pb-3   ">
-    <h1 class="text-xl font-semibold pb-2 pl-5">Organization Recomendations</h1>
-    <p class="text-slate-500 pl-5 pb-3 pr-5">Autism Centers are mainly located in certain areas of the country Which are...</p>
-       <p class="pl-5 pb-3 text-primary"><router-link :to="{name:'OrganizationRec'}">Read more</router-link></p>
-  </div>
-  
+<new-blog  
+        image-url=""
+        title="What is Autism"
+        desc="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+/>
+<new-blog  
+        image-url=""
+        title="Symptoms of Autism"
+        desc="There are some signs of Autstic people avoiding eye contact...."
+/>
+<new-blog  
+        image-url=""
+        title="Cause of Autism"
+        desc="Autism spectrum disorder has no single known cause. Given the complexity ..."
+/>
+<new-blog  
+        image-url=""
+        title="Categories of autism"
+        desc="There are different types of autism, such as autistic disorder... "
+/>
+<new-blog  
+        image-url=""
+        title="Recomended Foods"
+        desc="A healthy diet for people with autism means eating whole foods such as..."
+/>
+<new-blog  
+        image-url=""
+        title="Not Recomended Foods"
+        desc="A healthy diet for people with autism means eating whole foods such as..."
+/>
+<new-blog  
+        image-url=""
+        title="Doctor Recomendations"
+        desc="There are some doctors currently working on autism in diffrent corner..."
+/>
+<new-blog  
+        image-url=""
+        title="Organization Recomendations"
+        desc="Autism Centers are mainly located in certain areas of the country Which are..."
+/>
     </div>
     <div class="p-5 pt-10">
       <h1 class="font-semibold pb-4 text-xl">Latest Posts</h1>
@@ -75,7 +72,9 @@
   </template>
   
   <script>
+import NewBlog from './NewBlog.vue'
   export default {
+  components: { NewBlog },
      
     }
   

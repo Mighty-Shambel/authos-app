@@ -16,84 +16,28 @@
       <div class="-space-y-px rounded-md shadow-sm ">
         
         <div class="pb-2">
-          <label
-            for="fname"
-            class="
-              block
-              mb-2
-              text-sm
-              font-medium
-              text-gray-900
-              dark:text-gray-300
-            "
-            >First name</label
-          >
-          <input
-            type="text"
-            id="first_name"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-            placeholder="first name"
-            required
-          />
+       <base-input 
+       type="text"
+       label="First Name"
+       />
         </div>
         <div class="pb-2">
-          <label
-            for="lname"
-            class="
-              block
-              mb-2
-              text-sm
-              font-medium
-              text-gray-900
-              dark:text-gray-300
-            "
-            >Last name</label
-          >
-          <input
-            type="text"
-            id="last_name"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-            placeholder="last name"
-            required
+          <base-input 
+          type="text"
+          label="Last Name"
           />
         </div>
         <div class="pb-2" >
-        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-        <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
+        <base-input
+        type="email"
+        label="Email"
+        />
       </div>
       <div class="pb-2" >
-        <label for="workplace" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Workplace</label>
-        <input type="text" id="workplace" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="workplace" required>
+       <base-input
+       type="text"
+       label="Workplace"
+       />
       </div>
         <label>Gender</label>
         <div class="flex">
@@ -188,84 +132,28 @@
       <div class="-space-y-px rounded-md shadow-sm ">
         
         <div class="pb-2">
-          <label
-            for="fname"
-            class="
-              block
-              mb-2
-              text-sm
-              font-medium
-              text-gray-900
-              dark:text-gray-300
-            "
-            >First name</label
-          >
-          <input
-            type="text"
-            id="first_name"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-            placeholder="first name"
-            required
+          <base-input 
+          type="text"
+          label="First Name"
           />
-        </div>
-        <div class="pb-2">
-          <label
-            for="lname"
-            class="
-              block
-              mb-2
-              text-sm
-              font-medium
-              text-gray-900
-              dark:text-gray-300
-            "
-            >Last name</label
-          >
-          <input
-            type="text"
-            id="last_name"
-            class="
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-            placeholder="last name"
-            required
-          />
-        </div>
-        <div class="pb-2" >
-        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-        <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
-      </div>
+           </div>
+           <div class="pb-2">
+             <base-input 
+             type="text"
+             label="Last Name"
+             />
+           </div>
+           <div class="pb-2" >
+           <base-input
+           type="email"
+           label="Email"
+           />
+         </div>
       <div class="pb-2" >
-        <label for="workplace" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Workplace</label>
-        <input type="text" id="workplace" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="workplace" required>
+        <base-input 
+        type="text"
+        label="Workplace"
+        />
       </div>
         <label>Gender</label>
         <div class="flex">
@@ -350,6 +238,7 @@
     </template>
     
     <script setup>
+     import BaseInput from '../../../components/BaseInput' 
      import Socialmedia from '../../../components/Socialmedia.vue';
     </script>
     

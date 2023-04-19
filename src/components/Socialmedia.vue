@@ -7,7 +7,6 @@
      <p class="pl-20 pr-20 text-white text-sm">Autos is a platform made for autism community.It includes a mobile application ,and a website, 
 its main purpose is to build a communication palform for parents,health professionals and autism
  centers. In addition it include related contents about autism in order to create awareness for the society.</p>
-  
      </span>
      </div>
      
@@ -15,7 +14,3 @@ its main purpose is to build a communication palform for parents,health professi
 
 <script setup>
 </script>
-
-<style>
-
-</style>

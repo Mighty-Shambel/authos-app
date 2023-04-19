@@ -36,7 +36,7 @@
   >
   <div  v-if="isVisible" class="grid grid-cols-1 shadow-md absolute ">
   <p class=" hover:bg-slate-100  py-2 px-2"><router-link :to="{name:'ModEdit'}">Edit</router-link></p>
-  <p class=" hover:bg-slate-100  py-2 px-2 "><router-link :to="{name:'loginadmin'}">logout</router-link></p> 
+  <p class=" hover:bg-slate-100  py-2 px-2 "><router-link :to="{name:'LoginAdmin'}">logout</router-link></p> 
   </div>
   
   </div>

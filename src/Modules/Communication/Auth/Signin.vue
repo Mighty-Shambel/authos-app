@@ -14,13 +14,18 @@
       <form class="mt-8 space-y-5" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
         <div class=" rounded-md shadow-sm mb-3">
+          <!-- Using Basinput component for the forms -->
           <div class="pb-2" >
-            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-            <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
+            <base-input
+            type="email"
+            label="Email"
+            />
           </div>
           <div class="pb-2" >
-            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="password" required>
+            <base-input
+            type="password"
+            label="Password"
+            />
           </div>
         </div>
 
@@ -55,16 +60,21 @@
       <div>
         <h2   class="text-center text-2xl font-semibold tracking-tight text-gray-900">Log in</h2>
       </div>
+      <!-- Forms for mobile using baseinput -->
       <form class="mt-8 space-y-5" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
         <div class=" rounded-md shadow-sm mb-3">
           <div class="pb-2" >
-            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
-            <input type="email" id="email_address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required>
+            <base-input
+            type="email"
+            label="Email"
+            />
           </div>
           <div class="pb-2" >
-            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-            <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="password" required>
+            <base-input
+            type="password"
+            label="Password"
+            />
           </div>
         </div>
 
@@ -94,8 +104,9 @@
 </template>
 
 <script setup>
+import BaseInput from '../../../components/BaseInput.vue';
 import Socialmedia from '../../../components/Socialmedia.vue';
-  components: { Socialmedia }
+  components: { BaseInput,Socialmedia }
 </script>
 
 <style>
