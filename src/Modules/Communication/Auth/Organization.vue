@@ -128,7 +128,7 @@
     
     <script setup>
     import BaseInput from '../../../components/BaseInput.vue';
-    import Socialmedia from '../../../components/Socialmedia.vue';
+    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
     </script>
     
     <style>

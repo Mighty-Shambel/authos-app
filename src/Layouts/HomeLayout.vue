@@ -12,8 +12,8 @@
   </template>
   
   <script>
-import MyFooter from '../components/MyFooter.vue';
-import Navbar from '../components/Navbar.vue';
+import MyFooter from '../components/Home/MyFooter.vue';
+import Navbar from '../components/Home/Navbar.vue';
   export default {
   components: { MyFooter,Navbar },
     name: 'HomeLayout'

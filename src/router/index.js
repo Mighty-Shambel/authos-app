@@ -114,6 +114,10 @@ const router = createRouter({
       component: AwarenessBlog,
     },
     {
+      path:"/awareness/:id",
+      component:()=>import('../Modules/Awareness/Awareness.vue')
+    },
+    {
       path: "/categories",
       name: "Categories",
       component: Categories,

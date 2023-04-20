@@ -60,6 +60,6 @@
 
 <script setup>
 import BaseInput from '../../../components/BaseInput.vue';
-import Navbar from '../../../components/Navbar.vue';
+import Navbar from '../../../components/Home/Navbar.vue';
 Navbar
 </script>

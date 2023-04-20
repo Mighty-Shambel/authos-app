@@ -10,17 +10,9 @@
   export default {
   
       props:{
-          title:{
-              type:String,
-              default:''
-          },
-          desc:{
-               type:String,
-               default:''
-          },
-         imageUrl:{
-            type:String
-         }
+          title:String,
+          desc:String,
+          imageUrl:String
       }
   }
   </script>

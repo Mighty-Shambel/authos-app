@@ -18,89 +18,51 @@
   </div>
   <div class="p-10 lg:pt-24 bg-slate-50">
     <h1 class="font-semibold pb-4 text-xl">Related Contents</h1>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96 bg-white rounded md">
-      <div>
-        <img src="/src/assets/auth.webp" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-5">
-      <h1 class=" pl-5"><router-link :to="{name:'Definition'}">What is autism</router-link></h1>
-    <p class="text-slate-500 pl-5 ">Autism is also known as Autism Spectrum Disorder (ASD) </p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/symptom.jpg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="pl-5"><router-link :to="{name:'Symptom'}">Symptom of autism</router-link></h1>
-    <p class="text-slate-500 pl-5">There are some signs of Autstic people avoiding eye contact....</p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96 bg-white rounded md">
-      <div>
-        <img src="/src/assets/causes.jpeg" class=" rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="pl-5"><router-link :to="{name:'Causes'}">Causes of autism</router-link></h1>
-    <p class="text-slate-500 pl-5">There are some signs of Autstic people avoiding eye contact....</p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/categories.jpg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class=" pl-5"><router-link :to="{name:'Categories'}">Categories of autism</router-link> </h1>
-    <p class="text-slate-500 pl-5">There are different types of autism, such as autistic disorder</p>
-    </div>
-    </div>
-   
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/food.jpeg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="  pl-5"><router-link :to="{name:'Recomended'}">Food Recomendations</router-link></h1>
-    <p class="text-slate-500 pl-5">A healthy diet for people with autism means eating whole...</p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/sugar.jpeg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="  pl-5"><router-link :to="{name:'NotRecomended'}">Not Recomended Food</router-link></h1>
-    <p class="text-slate-500 pl-5">Dietary supplements have been proven to be very...</p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/doctors.jpg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="  pl-5"><router-link :to="{name:'Doctors'}">Doctor Recomendations</router-link></h1>
-    <p class="text-slate-500 pl-5">There are some doctors currently working on ...</p>
-    </div>
-    </div>
-    <div class="grid grid-cols-2  mb-5 shadow md w-96 md:w-48 lg:w-96  bg-white rounded md">
-      <div>
-        <img src="/src/assets/organization.jpg" class="rounded-md">
-      </div>
-    <div class="pt-2 pr-2">
-      <h1 class="  pl-5"><router-link :to="{name:'OrganizationRec'}">Organization Recomendations</router-link></h1>
-    <p class="text-slate-500 pl-5">Autism Centers are mainly located in...</p>
-    </div>
-    </div>
+   <related-content 
+   title="What is Autism"
+   image="/src/assets/auth.webp"
+   desc="Autism is also known as Austistic spectrum disorder"
+   />
+   <related-content 
+   title="Symptom of autism"
+   image="/src/assets/symptom.jpg"
+   desc="There are some signs of Autstic people avoiding eye contact...."
+   />
+   <related-content 
+   title="Causes of autism"
+   image="/src/assets/causes.jpeg"
+   desc="There are some signs of Autstic people avoiding eye contact...."
+   />
+   <related-content 
+   title="Categories of autism"
+   image="/src/assets/categories.jpg"
+   desc="There are different types of autism, such as autistic disorder"
+   />
+   <related-content 
+   title="Food Recomendations"
+   image="/src/assets/food.jpeg"
+   desc="A healthy diet for people with autism means eating whole..."
+   />
+   <related-content 
+   title="Not Recomended Food"
+   image="/src/assets/sugar.jpeg"
+   desc="Dietary supplements have been proven to be very..."
+   />
+   <related-content 
+   title="Doctor Recomendations"
+   image="/src/assets/doctors.jpg"
+   desc="There are some doctors currently working on ..."
+   />
+   <related-content 
+   title="Organization Recomendations"
+   image="/src/assets/organization.jpg"
+   desc="Autism Centers are mainly located in..."
+   />
 </div>
   </div>
 </div>
 </template>
 
 <script setup>
-import Navbar from '../../../components/Navbar.vue';
-Navbar
+import RelatedContent from '../../../components/Blog/RelatedContent.vue';
 </script>
-
-<style>
-
-</style>

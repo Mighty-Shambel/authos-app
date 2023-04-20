@@ -11,7 +11,7 @@
   </template>
   
   <script>
-import Communication from '../components/Communication.vue';
+import Communication from '../components/Communication/Communication.vue';
   export default {
   components: { Communication},
     name: 'HomeLayout'
