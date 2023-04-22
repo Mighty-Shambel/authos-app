@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 //home pages
-import LandingPage from "../views/Home/pages/LandingPage.vue"
-import About from "../views/Home/pages/About.vue";
-import Contactus from "../views/Home/pages/Contactus.vue";
-import Privacypolicy from "../views/Home/pages/Privacypolicy.vue";
-import Termsofuse from "../views/Home/pages/Termsofuse.vue";
+import LandingPage from "../views/Home/LandingPage.vue"
+import About from "../views/Home/About.vue";
+import Contactus from "../views/Home/Contactus.vue";
+import Privacypolicy from "../views/Home/Privacypolicy.vue";
+import Termsofuse from "../views/Home/Termsofuse.vue";
 import HomeLayout from '../Layouts/HomeLayout.vue'
 
 //Communication pages

@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import BaseInput from '../../../components/BaseInput.vue';
-import Navbar from '../../../components/Home/Navbar.vue';
+import BaseInput from '../../components/BaseInput.vue';
+import Navbar from '../../components/Home/Navbar.vue';
 Navbar
 </script>
