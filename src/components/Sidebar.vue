@@ -70,7 +70,7 @@
   </template>
   
   <script >
-import ReportDropdown from '../Modules/Dashboard/Admin/Report/ReportDropdown.vue';
+import ReportDropdown from '../views/Dashboard/Admin/Report/ReportDropdown.vue';
 
   export default {
     data() {

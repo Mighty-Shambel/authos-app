@@ -1,18 +1,19 @@
-[
+{
+  "destinations": [
     {
-    "title":"What is Autism",
-    "image":"/src/assets/organization.jpg",
-    "desc":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      "name": "Autism",
+      "image": "brazil.jpg",
+      "id": 1
     },
     {
-    "title":"Categories of Autism",
-    "image":"/src/assets/organization.jpg",
-    "desc":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      "name": "Causes",
+      "image": "brazil.jpg",
+      "id": 2
     },
     {
-    "title":"Causes of Autism",
-    "image":"/src/assets/organization.jpg",
-    "desc":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      "name": "Categories",
+      "image": "brazil.jpg",
+      "id": 3
     }
-   
-]
+  ]
+}

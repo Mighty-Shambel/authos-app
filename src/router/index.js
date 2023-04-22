@@ -1,66 +1,66 @@
 import { createRouter, createWebHistory } from "vue-router";
 //home pages
-import LandingPage from "../Modules/Home/pages/LandingPage.vue"
-import About from "../Modules/Home/pages/About.vue";
-import Contactus from "../Modules/Home/pages/Contactus.vue";
-import Privacypolicy from "../Modules/Home/pages/Privacypolicy.vue";
-import Termsofuse from "../Modules/Home/pages/Termsofuse.vue";
+import LandingPage from "../views/Home/pages/LandingPage.vue"
+import About from "../views/Home/pages/About.vue";
+import Contactus from "../views/Home/pages/Contactus.vue";
+import Privacypolicy from "../views/Home/pages/Privacypolicy.vue";
+import Termsofuse from "../views/Home/pages/Termsofuse.vue";
 import HomeLayout from '../Layouts/HomeLayout.vue'
 
 //Communication pages
-import Signin from "../Modules/Communication/Auth/Signin.vue";
-import CreateAccount from "../Modules/Communication/Auth/CreateAccount.vue";
-import Parent from "../Modules/Communication/Auth/Parent.vue";
-import HealthProfessional from "../Modules/Communication/Auth/HealthProfessional.vue";
-import Organization from "../Modules/Communication/Auth/Organization.vue";
-import Child from "../Modules/Communication/Auth/Child.vue";
-import ForgotPassword from "../Modules/Communication/Auth/ForgotPassword.vue";
-import Chat from "../Modules/Communication/Pages/Chat.vue"
-import Feed from "../Modules/Communication/pages/Feed.vue"
-import Notification from "../Modules/Communication/pages/Notification.vue"
-import Profile  from "../Modules/Communication/Pages/Profile.vue"
-import Friends from  "../Modules/Communication/Pages/Friends.vue"
-import ChatList from "../Modules/Communication/Pages/ChatList.vue"
+import Signin from "../views/Communication/Auth/Signin.vue";
+import CreateAccount from "../views/Communication/Auth/CreateAccount.vue";
+import Parent from "../views/Communication/Auth/Parent.vue";
+import HealthProfessional from "../views/Communication/Auth/HealthProfessional.vue";
+import Organization from "../views/Communication/Auth/Organization.vue";
+import Child from "../views/Communication/Auth/Child.vue";
+import ForgotPassword from "../views/Communication/Auth/ForgotPassword.vue";
+import Chat from "../views/Communication/Pages/Chat.vue"
+import Feed from "../views/Communication/pages/Feed.vue"
+import Notification from "../views/Communication/pages/Notification.vue"
+import Profile  from "../views/Communication/Pages/Profile.vue"
+import Friends from  "../views/Communication/Pages/Friends.vue"
+import ChatList from "../views/Communication/Pages/ChatList.vue"
 
 //Awareness pages
-import AwarenessBlog from "../Modules/Awareness/pages/AwarenessBlog.vue";
-import Categories from "../Modules/Awareness/pages/Categories.vue";
-import Causes from "../Modules/Awareness/pages/Causes.vue";
-import Definition from "../Modules/Awareness/pages/Definition.vue";
-import Doctors from "../Modules/Awareness/pages/Doctors.vue";
-import NotRecomended from "../Modules/Awareness/pages/NotRecomended.vue";
-import OrganizationRec from "../Modules/Awareness/pages/OrganizationRec.vue";
-import Recomended from "../Modules/Awareness/pages/Recomended.vue";
-import Symptom from "../Modules/Awareness/pages/Symptom.vue";
+import AwarenessBlog from "../views/Awareness/pages/AwarenessBlog.vue";
+import Categories from "../views/Awareness/pages/Categories.vue";
+import Causes from "../views/Awareness/pages/Causes.vue";
+import Definition from "../views/Awareness/pages/Definition.vue";
+import Doctors from "../views/Awareness/pages/Doctors.vue";
+import NotRecomended from "../views/Awareness/pages/NotRecomended.vue";
+import OrganizationRec from "../views/Awareness/pages/OrganizationRec.vue";
+import Recomended from "../views/Awareness/pages/Recomended.vue";
+import Symptom from "../views/Awareness/pages/Symptom.vue";
 import AwarenessLayout from '../Layouts/AwarenessLayout.vue'
 import CommunicationLayout from '../Layouts/CommunicationLayout.vue'
 //Admin pages
-import AdminDashboard from "../Modules/Dashboard/Admin/AdminDashboard.vue";
-import CreateCategories from "../Modules/Dashboard/Admin/System/CreateCategories.vue";
-import CreateCauses from "../Modules/Dashboard/Admin/System/CreateCauses.vue";
-import CreateDefinition from "../Modules/Dashboard/Admin/System/CreateDefinition.vue";
-import CreateDoctors from "../Modules/Dashboard/Admin/System/CreateDoctors.vue";
-import CreateFood from "../Modules/Dashboard/Admin/System/CreateFood.vue";
-import CreateNotRecomended from "../Modules/Dashboard/Admin/System/CreateNotRecomended.vue";
-import CreateOrganization from "../Modules/Dashboard/Admin/System/CreateOrganization.vue";
-import CreateSymptom from "../Modules/Dashboard/Admin/System/CreateSymptom.vue";
-import SystemUpdate from "../Modules/Dashboard/Admin/System/SystemUpdate.vue";
-import UserList from "../Modules/Dashboard/Admin/UserList.vue";
-import AssignModerator from "../Modules/Dashboard/Admin/AssignModerator.vue";
-import VerificationAdmin from "../Modules/Dashboard/Admin/VerificationAdmin.vue";
-import ReportDropdown from "../Modules/Dashboard/Admin/Report/ReportDropdown.vue"
-import ReportProfile from "../Modules/Dashboard/Admin/Report/ReportProfile.vue"
-import ReportComment from "../Modules/Dashboard/Admin/Report/ReportComment.vue"
-import ReportPost from "../Modules/Dashboard/Admin/Report/ReportPost.vue"
-import EditAdmin from "../Modules/Dashboard/Admin/EditAdmin.vue"
-import LoginAdmin from "../Modules/Dashboard/Admin/LoginAdmin.vue"
+import AdminDashboard from "../views/Dashboard/Admin/AdminDashboard.vue";
+import CreateCategories from "../views/Dashboard/Admin/System/CreateCategories.vue";
+import CreateCauses from "../views/Dashboard/Admin/System/CreateCauses.vue";
+import CreateDefinition from "../views/Dashboard/Admin/System/CreateDefinition.vue";
+import CreateDoctors from "../views/Dashboard/Admin/System/CreateDoctors.vue";
+import CreateFood from "../views/Dashboard/Admin/System/CreateFood.vue";
+import CreateNotRecomended from "../views/Dashboard/Admin/System/CreateNotRecomended.vue";
+import CreateOrganization from "../views/Dashboard/Admin/System/CreateOrganization.vue";
+import CreateSymptom from "../views/Dashboard/Admin/System/CreateSymptom.vue";
+import SystemUpdate from "../views/Dashboard/Admin/System/SystemUpdate.vue";
+import UserList from "../views/Dashboard/Admin/UserList.vue";
+import AssignModerator from "../views/Dashboard/Admin/AssignModerator.vue";
+import VerificationAdmin from "../views/Dashboard/Admin/VerificationAdmin.vue";
+import ReportDropdown from "../views/Dashboard/Admin/Report/ReportDropdown.vue"
+import ReportProfile from "../views/Dashboard/Admin/Report/ReportProfile.vue"
+import ReportComment from "../views/Dashboard/Admin/Report/ReportComment.vue"
+import ReportPost from "../views/Dashboard/Admin/Report/ReportPost.vue"
+import EditAdmin from "../views/Dashboard/Admin/EditAdmin.vue"
+import LoginAdmin from "../views/Dashboard/Admin/LoginAdmin.vue"
 
 //Moderator pages
-import ModReport from "../Modules/Dashboard/Moderator/Report/ModReport.vue";
-import ModReportDetails from "../Modules/Dashboard/Moderator/Report/ModReportDetails.vue";
-import ModVerification from "../Modules/Dashboard/Moderator/ModVerification.vue";
-import ModEdit from "../Modules/Dashboard/Moderator/ModEdit.vue";
-import ModConfirm from "../Modules/Dashboard/Moderator/ModConfirm.vue"
+import ModReport from "../views/Dashboard/Moderator/Report/ModReport.vue";
+import ModReportDetails from "../views/Dashboard/Moderator/Report/ModReportDetails.vue";
+import ModVerification from "../views/Dashboard/Moderator/ModVerification.vue";
+import ModEdit from "../views/Dashboard/Moderator/ModEdit.vue";
+import ModConfirm from "../views/Dashboard/Moderator/ModConfirm.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -112,10 +112,6 @@ const router = createRouter({
       path: "/awarenessblog",
       name: "AwarenessBlog",
       component: AwarenessBlog,
-    },
-    {
-      path:"/awareness/:id",
-      component:()=>import('../Modules/Awareness/Awareness.vue')
     },
     {
       path: "/categories",
