@@ -19,42 +19,42 @@
 </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:flex"> 
     <div class="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3 gap-10  rounded-lg  pt-10 p-10">
-<blog  
+<Blog
       imageUrl="/src/assets/auth.webp"
       title="What is Autism"
       desc="Autism is also known as Autism Spectrum Disorder (ASD). ‘Spectrum’"
 />
-<blog  
+<Blog
       imageUrl="/src/assets/symptom.jpg"
       title="Symptoms of Autism"
       desc="There are some signs of Autstic people avoiding eye contact...."
 />
-<blog  
+<Blog
       imageUrl="/src/assets/causes.jpeg"
       title="Cause of Autism"
       desc="Autism spectrum disorder has no single known cause. Given the complexity ..."
 />
-<blog  
+<Blog
       imageUrl="/src/assets/categories.jpg"
       title="Categories of autism"
       desc="There are different types of autism, such as autistic disorder... "
 />
-<blog  
+<Blog
       imageUrl="/src/assets/food.jpeg"
       title="Recomended Foods"
       desc="A healthy diet for people with autism means eating whole foods such as..."
 />
-<blog  
+<Blog
       imageUrl="/src/assets/sugar.jpeg"
       title="Not Recomended Foods"
       desc="A healthy diet for people with autism means eating whole foods such as..."
 />
-<blog  
+<Blog
       imageUrl="/src/assets/doctors.jpg"
       title="Doctor Recomendations"
       desc="There are some doctors currently working on autism in diffrent corner..."
 />
-<blog  
+<Blog
       imageUrl="/src/assets/organization.jpg"
       title="Organization Recomendations"
       desc="Autism Centers are mainly located in certain areas of the country Which are..."
@@ -62,19 +62,19 @@
   </div>
   <div class="p-5 pt-10">
     <h1 class="font-semibold pb-4 text-xl">Latest Posts</h1>
-   <latest-post 
+   <LatestPost
    title="what is autism"
    image="/src/assets/auth.webp"
    />
-   <latest-post 
+   <LatestPost
    title="Categories of autism"
    image="/src/assets/categories.jpg"
    />
-   <latest-post 
+   <LatestPost
    title="Symptoms of autism"
    image="/src/assets/symptom.jpg"
    />
-   <latest-post 
+   <LatestPost
    title="Food Recomendations"
    image="/src/assets/food.jpeg"
    />
@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import Blog from '../../../components/Blog/Blog.vue'
+import Blog  from '../../../components/Blog/Blog.vue'
 import LatestPost from '../../../components/Blog/LatestPost.vue'
 export default {
 components: {Blog, LatestPost },

@@ -1,7 +1,7 @@
 <template>
-  <slider></slider>
-  <about></about>
-  <contactus></contactus>
+  <Slider/>
+  <About/>
+  <Contactus/>
 </template>
 
 <script setup>

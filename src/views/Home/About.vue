@@ -20,10 +20,7 @@
 </template>
 
 <script setup>
-
-import Navbar from '../../components/Home/Navbar.vue';
 import HomeLayout from '../../Layouts/HomeLayout.vue';
-Navbar
 HomeLayout
 </script>
 

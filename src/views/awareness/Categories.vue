@@ -18,42 +18,42 @@
   </div>
   <div class="p-10 lg:pt-24 bg-slate-50">
     <h1 class="font-semibold pb-4 text-xl">Related Contents</h1>
-   <related-content 
+   <RelatedContent
    title="What is Autism"
    image="/src/assets/auth.webp"
    desc="Autism is also known as Austistic spectrum disorder"
    />
-   <related-content 
+   <RelatedContent
    title="Symptom of autism"
    image="/src/assets/symptom.jpg"
    desc="There are some signs of Autstic people avoiding eye contact...."
    />
-   <related-content 
+   <RelatedContent
    title="Causes of autism"
    image="/src/assets/causes.jpeg"
    desc="There are some signs of Autstic people avoiding eye contact...."
    />
-   <related-content 
+   <RelatedContent
    title="Categories of autism"
    image="/src/assets/categories.jpg"
    desc="There are different types of autism, such as autistic disorder"
    />
-   <related-content 
+   <RelatedContent
    title="Food Recomendations"
    image="/src/assets/food.jpeg"
    desc="A healthy diet for people with autism means eating whole..."
    />
-   <related-content 
+   <RelatedContent
    title="Not Recomended Food"
    image="/src/assets/sugar.jpeg"
    desc="Dietary supplements have been proven to be very..."
    />
-   <related-content 
+   <RelatedContent
    title="Doctor Recomendations"
    image="/src/assets/doctors.jpg"
    desc="There are some doctors currently working on ..."
    />
-   <related-content 
+   <RelatedContent
    title="Organization Recomendations"
    image="/src/assets/organization.jpg"
    desc="Autism Centers are mainly located in..."
@@ -65,4 +65,5 @@
 
 <script setup>
 import RelatedContent from '../../../components/Blog/RelatedContent.vue';
+RelatedContent
 </script>

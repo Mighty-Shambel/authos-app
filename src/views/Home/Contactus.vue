@@ -10,19 +10,19 @@
       <input type="hidden" name="remember" value="true">
       <div class="-space-y-px rounded-md shadow-sm">
         <div class="pb-2">
-          <base-input 
+          <BaseInput
           type="text"
           label="Company Name"
           />
         </div>
         <div class="pb-2">
-          <base-input 
+          <BaseInput
           type="email"
           label="Email"
           />
         </div>
         <div class="pb-2">
-         <base-input 
+         <BaseInput
          type="number"
          label="Phone"
          />
