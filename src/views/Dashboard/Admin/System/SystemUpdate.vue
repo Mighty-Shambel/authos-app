@@ -1,5 +1,4 @@
 <template>
-    <sidebar>
       <div class="grid-cols-1 p-20 pt-10 pb-10">
         <div class="flex pb-5"> 
           <p class="w-60 pl-5">Image</p> 
@@ -205,14 +204,11 @@
     </div>
     <Div v-if="viewModal" class="absolute inset-0 z-40 opacity-25 bg-black"></Div>
       </div> 
-      </div>
-    </sidebar>
-    
-    
+      </div>  
     </template>
     
     <script>
-    import Sidebar from '../../../../components/Sidebar.vue';
+  
     export default {
       data(){
     return{
@@ -221,7 +217,7 @@
       editModal:false
     }
       },
-      components: { Sidebar },
+      
     
     }
     </script>

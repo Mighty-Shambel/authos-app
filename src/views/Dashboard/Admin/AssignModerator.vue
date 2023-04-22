@@ -1,5 +1,5 @@
 <template>
-    <sidebar>
+  
         <div class="flex  items-center justify-center sm:px-6 lg:px-8">
     <div class="w-full mr-64 pr-96  pl-20">
       <div>
@@ -26,13 +26,12 @@
       </form>
     </div>
   </div>
-    </sidebar>
+
   </template>
   
   <script>
-  import Sidebar from '../../../components/Sidebar.vue';
   export default {
-  components: { Sidebar },
+
   
   }
   </script>

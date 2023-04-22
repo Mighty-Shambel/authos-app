@@ -73,7 +73,7 @@
 </template>
 
 <script setup>
-import RelatedContent from '../../../components/Blog/RelatedContent.vue';
+import RelatedContent from '../../components/Blog/RelatedContent.vue';
 </script>
 
 <style>

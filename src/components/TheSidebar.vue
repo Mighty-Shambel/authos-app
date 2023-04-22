@@ -56,13 +56,9 @@
     
   </div>
   </div>
-  
-  
     <div>
-  
   </div>
-    
-  <slot></slot>
+  <router-view></router-view>
   </div>
   
   

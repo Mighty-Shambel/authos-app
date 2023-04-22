@@ -51,7 +51,6 @@ export default {
   },
 }; -->
 <template>
-    <mod-sidebar>
         <div class="flex  items-center justify-center sm:px-6 lg:px-8">
     <div class="w-full mr-64 pr-96  pl-20">
       <div>
@@ -74,13 +73,11 @@ export default {
       </form>
     </div>
   </div>
-    </mod-sidebar>
+
   </template>
   
   <script>
-import ModSidebar from '../../../components/ModSidebar.vue'
   export default {
-  components: { ModSidebar },
   
   }
   </script>

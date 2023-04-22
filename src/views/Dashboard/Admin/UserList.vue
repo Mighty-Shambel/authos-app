@@ -1,5 +1,4 @@
 <template>
-    <sidebar>
       <div class="grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-20  pt-10">
   <div class="py-3 px-3"> 
     <div class="flex pb-5  pt-5 mb-10 px-3"> 
@@ -64,19 +63,16 @@
     </div>
   </div>
   <Div v-if="viewModal" class="absolute inset-0 z-40 opacity-25 bg-black"></Div>
-    </sidebar>
   </template>
   
   <script>
-  import Sidebar from '../../../components/Sidebar.vue';
   export default {
     data(){
   return{
     toggleModal:false,
     viewModal:false,
   }
-    },
-    components: { Sidebar },
+    }
   
   }
   </script>

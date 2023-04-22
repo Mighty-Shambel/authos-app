@@ -1,5 +1,4 @@
 <template>
-    <mod-sidebar>
        <div class="grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-20  mr-48 pr-60 pt-10">
   <div class="py-5 px-3"> 
     <div class="flex pb-5 shadow md pl-10 pt-5 mb-10"> 
@@ -43,19 +42,15 @@
   </div>
   <Div v-if="detailsModal" class="absolute inset-0 z-40 opacity-25 bg-black"></Div>
     </div>
-</mod-sidebar>
   </template>
   
   <script>
-  import ModSidebar from '../../../../components/ModSidebar.vue';
   export default {
     data(){
   return{
     detailsModal:false,
   }
-    },
-    components: { ModSidebar },
-  
+    },  
   }
   </script>
   

@@ -1,5 +1,4 @@
 <template>
-    <mod-sidebar>
    <div class="p-20">
      <div class=" flex pb-5">
        <img src="/src/assets/doctors.jpg" class="w-12 h-12 rounded-full ">
@@ -13,14 +12,11 @@
        </div>
        
    </div>
-</mod-sidebar>
    </template>
    
    <script>
-   import ModSidebar from '../../../../components/ModSidebar.vue';
    export default {
-     components: {ModSidebar },
-   
+
    }
    </script>
    

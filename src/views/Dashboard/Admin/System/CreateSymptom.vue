@@ -1,13 +1,4 @@
 <template>
-  <sidebar>
-    <!--
-    This example requires updating your template:
-
-    ```
-    <html class="h-full bg-gray-50">
-    <body class="h-full">
-    ```
-  -->
   <div class="flex  items-center justify-center sm:px-6 lg:px-8">
     <div class="w-full px-20 pr-72 ">
       <div>
@@ -39,16 +30,11 @@
       </form>
     </div>
   </div>
-  </sidebar>
 </template>
 
 <script>
 import axios from "axios";
-import Sidebar from "../../../../components/Sidebar.vue"
 export default {
-components:{
-  Sidebar
-},
 data() {
   return {
     formData: {

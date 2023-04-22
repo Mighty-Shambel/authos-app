@@ -84,8 +84,8 @@
 </template>
 
 <script>
-import Blog  from '../../../components/Blog/Blog.vue'
-import LatestPost from '../../../components/Blog/LatestPost.vue'
+import Blog  from '../../components/Blog/Blog.vue'
+import LatestPost from '../../components/Blog/LatestPost.vue'
 export default {
 components: {Blog, LatestPost },
   }

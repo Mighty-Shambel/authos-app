@@ -68,5 +68,5 @@ Improving diet and choosing specific supplements can help your child better mana
 </template>
 
 <script setup>
-import RelatedContent from '../../../components/Blog/RelatedContent.vue';
+import RelatedContent from '../../components/Blog/RelatedContent.vue';
 </script>

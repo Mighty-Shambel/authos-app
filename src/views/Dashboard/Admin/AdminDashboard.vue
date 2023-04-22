@@ -1,14 +1,9 @@
 <template>
-    <sidebar>
-      Dashboard
-    </sidebar>
-  </template>
-  
+  <h1>Admin dashboard</h1> 
+</template>
+
   <script setup>
-  import Sidebar from '../../../components/Sidebar.vue';
-
-    components: { Sidebar }
-
+  
   </script>
   
   <style>

@@ -6,7 +6,7 @@
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>
-      <span class="pt-3 ml-40"><router-link :to="{name:'Profile'}">View Profile</router-link></span>
+      <span class="pt-3 ml-40"><router-link :to="{name:'Feed'}">View Comment</router-link></span>
       <span @click="detailsModal=!detailsModal" class="pt-3 ml-40 mr-5 ">Details</span>
       
     </div>
@@ -15,7 +15,7 @@
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>
-      <span class="pt-3 ml-40"><router-link :to="{name:'Profile'}">View Profile</router-link></span>
+      <span class="pt-3 ml-40"><router-link :to="{name:'Feed'}">View Comment</router-link></span>
       <span @click="detailsModal=!detailsModal" class="pt-3 ml-40 mr-5 ">Details</span>
     </div>
     <div class="flex pb-5 shadow md pl-10 pt-5"> 
@@ -23,7 +23,7 @@
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>
-      <span class="pt-3 ml-40"><router-link :to="{name:'Profile'}">View Profile</router-link></span>
+      <span class="pt-3 ml-40"><router-link :to="{name:'Feed'}">View Comment</router-link></span>
       <span @click="detailsModal=!detailsModal" class="pt-3 ml-40 mr-5 ">Details</span>
   </div>
   </div>
@@ -58,4 +58,3 @@ return{
 <style>
 
 </style>
-  

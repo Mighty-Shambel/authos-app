@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 //home pages
+import AwarenessView from '../views/AwarenessView'
 import LandingPage from "../views/Home/LandingPage.vue"
 import About from "../views/Home/About.vue";
 import Contactus from "../views/Home/Contactus.vue";
@@ -23,18 +24,19 @@ import Friends from  "../views/Communication/Pages/Friends.vue"
 import ChatList from "../views/Communication/Pages/ChatList.vue"
 
 //Awareness pages
-import AwarenessBlog from "../views/Awareness/pages/AwarenessBlog.vue";
-import Categories from "../views/Awareness/pages/Categories.vue";
-import Causes from "../views/Awareness/pages/Causes.vue";
-import Definition from "../views/Awareness/pages/Definition.vue";
-import Doctors from "../views/Awareness/pages/Doctors.vue";
-import NotRecomended from "../views/Awareness/pages/NotRecomended.vue";
-import OrganizationRec from "../views/Awareness/pages/OrganizationRec.vue";
-import Recomended from "../views/Awareness/pages/Recomended.vue";
-import Symptom from "../views/Awareness/pages/Symptom.vue";
-import AwarenessLayout from '../Layouts/AwarenessLayout.vue'
-import CommunicationLayout from '../Layouts/CommunicationLayout.vue'
+import AwarenessBlog from "../views/Awareness/AwarenessBlog.vue";
+import Categories from "../views/Awareness/Categories.vue";
+import Causes from "../views/Awareness/Causes.vue";
+import Definition from "../views/Awareness/Definition.vue";
+import Doctors from "../views/Awareness/Doctors.vue";
+import NotRecomended from "../views/Awareness/NotRecomended.vue";
+import OrganizationRec from "../views/Awareness/OrganizationRec.vue";
+import Recomended from "../views/Awareness/Recomended.vue";
+import Symptom from "../views/Awareness/Symptom.vue";
+import AwarenessLayout from '../layouts/AwarenessLayout.vue'
+import CommunicationLayout from '../layouts/CommunicationLayout.vue'
 //Admin pages
+import AdminLayout from '../layouts/AdminLayout'
 import AdminDashboard from "../views/Dashboard/Admin/AdminDashboard.vue";
 import CreateCategories from "../views/Dashboard/Admin/System/CreateCategories.vue";
 import CreateCauses from "../views/Dashboard/Admin/System/CreateCauses.vue";
@@ -56,15 +58,25 @@ import EditAdmin from "../views/Dashboard/Admin/EditAdmin.vue"
 import LoginAdmin from "../views/Dashboard/Admin/LoginAdmin.vue"
 
 //Moderator pages
+import ModeratorLayout from '../layouts/ModeratorLayout.vue'
 import ModReport from "../views/Dashboard/Moderator/Report/ModReport.vue";
 import ModReportDetails from "../views/Dashboard/Moderator/Report/ModReportDetails.vue";
 import ModVerification from "../views/Dashboard/Moderator/ModVerification.vue";
 import ModEdit from "../views/Dashboard/Moderator/ModEdit.vue";
 import ModConfirm from "../views/Dashboard/Moderator/ModConfirm.vue"
+import ModReportDropdown from "../views/Dashboard/Moderator/Report/ModReportDropdown.vue"
+import ModReportProfile from "../views/Dashboard/Moderator/Report/ModReportProfile.vue"
+import ModReportComment from "../views/Dashboard/Moderator/Report/ModReportComment.vue"
+import ModReportPost from "../views/Dashboard/Moderator/Report/ModReportPost.vue"
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    {
+      path:'/awareness/:id',
+      name:'AwarenessView',
+      component:AwarenessView
+    },
     //home pages
     {
       path: "/",
@@ -230,21 +242,22 @@ const router = createRouter({
   ],
 },
    
-   
-
-
-
-
+{
+  path: "/",
+  name:PublicKeyCredential,
+  component:AdminLayout,
+  redirect:'/',
+  children:[
     //Admin pages
-    {
-      path: "/systemupdate",
-      name: "SystemUpdate",
-      component: SystemUpdate,
-    },
     {
       path: "/admindashboard",
       name: "AdminDashboard",
       component: AdminDashboard,
+    },
+    {
+      path: "/systemupdate",
+      name: "SystemUpdate",
+      component: SystemUpdate,
     },
     {
       path: "/createcategories",
@@ -326,13 +339,22 @@ const router = createRouter({
       name: "EditAdmin",
       component: EditAdmin,
     },
-    {
-      path:"/loginadmin",
-      name:"LoginAdmin",
-      component:LoginAdmin
-    },
-    //Moderator
-    {
+  ]
+  },
+  {
+    path:"/loginadmin",
+    name:"LoginAdmin",
+    component:LoginAdmin
+  },
+    
+  {
+    path: "/",
+    name:PublicKeyCredential,
+    component:ModeratorLayout,
+    redirect:'/',
+    children:[
+      //Moderator pages
+      {
       path: "/modreport",
       name: "ModReport",
       component: ModReport,
@@ -356,7 +378,30 @@ const router = createRouter({
       path:'/modconfirm',
       name:"ModConfirm",
       component:ModConfirm
-    }
+    },
+    {
+      path:"/modreportdropdown",
+      name:"ModReportDropdown",
+      component:ModReportDropdown
+    },
+    {
+      path:"/modreportprofile",
+      name:"ModReportProfile",
+      component:ModReportProfile
+    },
+    {
+      path:"/modreportpost",
+      name:"ModReportPost",
+      component:ModReportPost
+    },
+    {
+      path:"/modreportcomment",
+      name:"ModReportComment",
+      component:ModReportComment
+    },
+
+  ],
+},
   ],
 });
 export default router;
