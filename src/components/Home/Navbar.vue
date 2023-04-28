@@ -37,6 +37,3 @@ let showMenu = ref(false);
   
 </script>
 
-<style>
-
-</style>

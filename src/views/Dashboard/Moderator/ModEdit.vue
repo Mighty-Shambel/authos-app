@@ -22,7 +22,7 @@
           </div>
   
           <div class="flex justify-start">
-            <button type="submit" class=" w-40 group relative flex w-full justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium text-white bg-tertiary ">
+            <button type="submit" class=" w-40 group relative flex  justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium text-white bg-tertiary ">
               Submit
             </button>
           </div>
@@ -34,11 +34,6 @@
   
   <script>
   export default {
-   
-  
+
   }
   </script>
-  
-  <style>
-  
-  </style>

@@ -64,7 +64,3 @@
 <script setup>
 import RelatedContent from '../../components/Blog/RelatedContent.vue';
 </script>
-
-<style>
-
-</style>

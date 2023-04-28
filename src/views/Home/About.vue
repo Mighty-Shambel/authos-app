@@ -20,10 +20,5 @@
 </template>
 
 <script setup>
-import HomeLayout from '../../Layouts/HomeLayout.vue';
-HomeLayout
+import HomeLayout from '../../layouts/HomeLayout.vue'
 </script>
-
-<style>
-
-</style>

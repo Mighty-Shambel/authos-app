@@ -1,19 +1,58 @@
-{
-  "destinations": [
+[
     {
-      "name": "Autism",
-      "image": "brazil.jpg",
-      "id": 1
+      "title": "What is Autism ",
+      "image": "./src/assets/auth.webp",
+      "id": 1,
+      "desc":"Autism is also known as Autism Spectrum",
+      "detail":"Autism is also known as Autism SpectrumDisorder (ASD). ‘Spectrum’ refers to Autism is also known as Autism Spectrum Disorder (ASD). ‘Spectrum’ refers to the wide range of characteristics, skills and abilities that different people with Autism have. No two people are affected by Autism in exactly the same way. Every person experiences Autism differently and has different support needs. Although the core characteristics of Autism can cause a range of challenges, it is important to recognise that they can also result in unique skills and capabilities. While Autism is a life-long condition, with appropriate and tailored support, children and Adults with Autism can make significant progress and live fulfilling lives. Consequently, it is imperative that people with Autism have access to specialist services that understand their needs and are experienced in developing their skills and strengths."
     },
     {
-      "name": "Causes",
-      "image": "brazil.jpg",
-      "id": 2
+      "title": "Symptoms of Autism",
+      "image": "./src/assets/symptom.jpg",
+      "id": 2,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1.While there is no “best autism diet,” there are certainly foods that can help improve your child’s autism symptoms and overall health. The best food for children with autism are fatty fish, eggs, grass-fed beef, sustainably raised animal proteins, shellfish, beans, nuts, and seeds.2.Research has found that fatty fish such as salmon and free-range eggs share the healthy omega 3 acid. Foods that contain omega 3s help fight inflammation in the body. Low consumption of omega 3 fatty acids has been linked to autism, dyslexia, ADHD, depression, anxiety, and dyspraxia. It is recommended to have free-range eggs and/or fatty fish 3 times per week. Grass fed beef also contains healthy omega 3s, vitamin A, and vitamin E. Grass fed beef also contains fewer additives like hormones and antibiotics, which are found in free-range chicken and other animal protein.3.Eating animal protein is also beneficial for kids with autism because it is an excellent source of vitamin B12. Vitamin B12 plays an important role in the nervous system and has been found to be beneficial to kids on the autism spectrum."
     },
     {
-      "name": "Categories",
-      "image": "brazil.jpg",
-      "id": 3
+      "title": "Causes of Autism",
+      "image": "./src/assets/causes.jpeg",
+      "id": 3,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1. Genetics. Several different genes appear to be involved in autism spectrum disorder. For some children, autism spectrum disorder can be associated with a genetic disorder, such as Rett syndrome or fragile X syndrome. For other children, genetic changes (mutations) may increase the risk of autism spectrum disorder. Still other genes may affect brain development or the way that brain cells communicate, or they may determine the severity of symptoms. Some genetic mutations seem to be inherited, while others occur spontaneously.2.Environmental factors. Researchers are currently exploring whether factors such as viral infections, medications or complications during pregnancy, or air pollutants play a role in triggering autism spectrum disorder."
+    },
+    {
+      "title": "Categories of Autism",
+      "image": "./src/assets/categories.jpg",
+      "id": 4,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1.Asperger’s Syndrome:Although the term Asperger’s syndrome was quite common before 2013, the term is actually no longer used by medical professionals. It has since been reclassified as level 1 autism spectrum disorder by the DSM-5 diagnostic manual. Still, Asperger’s syndrome may be used informally — in fact, autism communities use it more often than level 1 spectrum disorder 2.Rett Syndrome:Rett syndrome is a rare neurodevelopmental disorder that is noticed in infancy. The disorder mostly affects girls, although it can still be diagnosed in boys. Rett syndrome presents challenges that affect almost every aspect of a child's life. The good thing is your child can still enjoy and live a fulfilling life with the proper care. You can have family time together and provide support to allow the child to do what they enjoy.3.Childhood Disintegrative Disorder (CDD):Childhood disintegrative disorder (CDD), also known as Heller's syndrome or disintegrative psychosis, is a neurodevelopmental disorder defined by delayed onset of developmental problems in language, motor skills, or social function. A child experiences normal development in these areas only to hit a snag after age three and up to age 10. The developmental loss can be very heartbreaking for parents who had no idea their child had autism challenges all along."
+    },
+    {
+      "title": "Recomended Food",
+      "image": "./src/assets/food.jpeg",
+      "id": 5,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1.While there is no “best autism diet,” there are certainly foods that can help improve your child’s autism symptoms and overall health. The best food for children with autism are fatty fish, eggs, grass-fed beef, sustainably raised animal proteins, shellfish, beans, nuts, and seeds.2.Research has found that fatty fish such as salmon and free-range eggs share the healthy omega 3 acid. Foods that contain omega 3s help fight inflammation in the body. Low consumption of omega 3 fatty acids has been linked to autism, dyslexia, ADHD, depression, anxiety, and dyspraxia. It is recommended to have free-range eggs and/or fatty fish 3 times per week. Grass fed beef also contains healthy omega 3s, vitamin A, and vitamin E. Grass fed beef also contains fewer additives like hormones and antibiotics, which are found in free-range chicken and other animal protein.3.Eating animal protein is also beneficial for kids with autism because it is an excellent source of vitamin B12. Vitamin B12 plays an important role in the nervous system and has been found to be beneficial to kids on the autism spectrum."
+    },
+    {
+      "title": "Not Recomended Food",
+      "image": "./src/assets/symptom.jpg",
+      "id": 6,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"Dietary supplements have been proven to be very helpful for autistic symptoms, through both diet changes and supplementation. Improving diet and choosing specific supplements can help your child better manage their daily challenges.1.High-sugar foods2.Milk and other dairy products such as cheese, yogurt, iceceream3.Wheat products4.Processed meats 5.Processed snacks such as chips, crackers, cookies, etc."
+    },
+    {
+      "title": "Doctor Recomendations",
+      "image": "./src/assets/doctors.jpg",
+      "id": 7,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1.Doctor Gebeyehu Alemu works at Nehemia in Addis Ababa 2.Doctor Aster Minuyelet works at Bright side consultancy in Addis Ababa 3.Doctor Abebe Albachew works at Joy in Adama 4.Doctor Adane lema works at Gambi in Bahirdar 5.Doctor wegayehu solomon works at Nehemia in Addis Abab 6.Doctor Gebeyehu Alemu works at Nehemia 7.Doctor Gebeyehu Alemu works at Nehemia in Addis Ababa 8.Doctor Aster Minuyelet works at Bright side consultancy in Addis Ababa 9.Doctor Abebe Albachew works at Joy in Adama 10.Doctor Adane lema works at Gambi in Bahirdar 11.Doctor wegayehu solomon works at Nehemia in Addis Ababa 12.Doctor Gebeyehu Alemu works at Nehemia"
+    },
+    {
+      "title": "Organization Recomendations",
+      "image": "./src/assets/organization.jpg",
+      "id": 8,
+      "desc":"There are some known symptoms for autism ",
+      "detail":"1:Nehemia-Rahel Abayneh, Founder and Director of Nehemiah Autism Center, on her part said, she is pleased to have Abay Bank's staff for visiting and showing love and partnership to the center, and extended her appreciation to Abay Bank for its support at large.2:Joy-Autism is a kind of neural development disorder in children. 0.67% of infants globally are diagnosed with this condition and it’s symptomatically visible in the first 3 years of life, largely distinguished as weakening public interaction and repetitive or restricted behaviour. It alters the normal processing of information in the human brain by restricting or disturbing the organization and interconnection of nerve cells with their synapses. No certain cause or reason has been defined or suggested that may lead to the condition of Autism; neurological impairment, immunological deficiency or certain environmental factors are considered as major attribution to Autism."
     }
   ]
-}

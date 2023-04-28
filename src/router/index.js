@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import vlog from "../views/awareness/vlog.vue"
 //home pages
 import AwarenessView from '../views/AwarenessView'
 import LandingPage from "../views/Home/LandingPage.vue"
@@ -60,7 +61,6 @@ import LoginAdmin from "../views/Dashboard/Admin/LoginAdmin.vue"
 //Moderator pages
 import ModeratorLayout from '../layouts/ModeratorLayout.vue'
 import ModReport from "../views/Dashboard/Moderator/Report/ModReport.vue";
-import ModReportDetails from "../views/Dashboard/Moderator/Report/ModReportDetails.vue";
 import ModVerification from "../views/Dashboard/Moderator/ModVerification.vue";
 import ModEdit from "../views/Dashboard/Moderator/ModEdit.vue";
 import ModConfirm from "../views/Dashboard/Moderator/ModConfirm.vue"
@@ -68,6 +68,7 @@ import ModReportDropdown from "../views/Dashboard/Moderator/Report/ModReportDrop
 import ModReportProfile from "../views/Dashboard/Moderator/Report/ModReportProfile.vue"
 import ModReportComment from "../views/Dashboard/Moderator/Report/ModReportComment.vue"
 import ModReportPost from "../views/Dashboard/Moderator/Report/ModReportPost.vue"
+import NotFound from "../views/home/NotFound.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -76,6 +77,11 @@ const router = createRouter({
       path:'/awareness/:id',
       name:'AwarenessView',
       component:AwarenessView
+    },
+    {
+     path:'/vlog',
+     name:'vlog',
+     component:vlog
     },
     //home pages
     {
@@ -121,6 +127,11 @@ const router = createRouter({
   children:[
     //Awareness pages
     {
+      path:'/awareness/:id',
+      name:'AwarenessView',
+      component:AwarenessView
+    },
+    {
       path: "/awarenessblog",
       name: "AwarenessBlog",
       component: AwarenessBlog,
@@ -151,7 +162,7 @@ const router = createRouter({
       component: NotRecomended,
     },
     {
-      path: "/organiztionrec",
+      path: "/organizationrec",
       name: "OrganizationRec",
       component: OrganizationRec,
     },
@@ -360,11 +371,6 @@ const router = createRouter({
       component: ModReport,
     },
     {
-      path: "/modreportdetails",
-      name: "ModReportDetails",
-      component: ModReportDetails,
-    },
-    {
       path: "/modedit",
       name: "ModEdit",
       component: ModEdit,
@@ -402,6 +408,11 @@ const router = createRouter({
 
   ],
 },
+{
+  path:"/:pathMatch(.*)*",
+  name:"NotFound",
+  component:NotFound
+}
   ],
 });
 export default router;

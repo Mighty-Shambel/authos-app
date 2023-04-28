@@ -7,8 +7,6 @@
             <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
           </svg>          
         </span>
-        
-        
         <a href ='#' class=" hover:bg-slate-100">
             {{ name }}
         </a>
@@ -23,7 +21,6 @@
          <div class="sub-menu w-48" v-if="isOpened">
             <div class="menu-item  pl-16 pt-1 pb-1">
               <router-link :to="{name:'ReportPost'}">Post</router-link>
-              
             </div>
             <div class="menu-item   pl-16 pt-1 pb-1">
               <router-link :to="{name:'ReportProfile'}">Profile</router-link>

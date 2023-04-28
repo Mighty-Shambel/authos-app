@@ -66,7 +66,7 @@
   </template>
   
   <script >
-import ReportDropdown from '../views/Dashboard/Admin/Report/ReportDropdown.vue';
+import ReportDropdown from '../views/dashboard/admin/report/ReportDropdown.vue';
 
   export default {
     data() {
@@ -82,7 +82,4 @@ import ReportDropdown from '../views/Dashboard/Admin/Report/ReportDropdown.vue';
     components: { ReportDropdown }
 }
   </script>
-  
-  <style>
-  
-  </style>
+ 
