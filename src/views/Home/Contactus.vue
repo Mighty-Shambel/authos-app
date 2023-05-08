@@ -3,7 +3,7 @@
 <div class="shadow md flex min-h-full items-center justify-center py-10 sm:px-6 lg:px-8">
   <div class="w-full max-w-md space-y-8 ">
     <div>
-      <img class="mx-auto h-12 w-auto" src="/src/assets/logo.jpg" alt="Your Company">
+      <img class="mx-auto h-12 w-auto" src="/assets/logo.jpg" alt="Your Company">
       <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Ads Submission Form</h2>
     </div>
     <form class="mt-8 space-y-6" action="#" method="POST">

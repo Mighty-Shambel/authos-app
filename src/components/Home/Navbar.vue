@@ -1,8 +1,8 @@
 <template>
-  <div class="sticky top-0 bg-white py-3.5 px-6 shadow md:flex justify-between items-center ">
+  <div class="sticky top-0 z-50 bg-white py-3.5 px-6 shadow md:flex justify-between items-center ">
  <div class="flex items-center">
 <span class=" flex text-xl mr-1">
-<img class="h-10 w-10" src="/src/assets/logo.jpg" >
+<img class="h-10 w-10" src="/assets/logo.jpg" >
 <p class="text-3xl pl-2">Autos</p>
 </span>
 <span   class="md:hidden absolute right-5 top-3.5" >

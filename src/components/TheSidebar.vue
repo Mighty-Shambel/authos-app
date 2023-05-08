@@ -3,7 +3,7 @@
       <!-- Side bar -->
   <div class=" bg-tertiary text-white w-64">
       <div class="flex ml-2 mt-8">
-      <img src="/src/assets/logo.jpg" class="rounded-full h-8 w-8 mt-5 ml-3" alt="logo">
+      <img src="/assets/logo.jpg" class="rounded-full h-8 w-8 mt-5 ml-3" alt="logo">
       <span class="text-white text-3xl mt-4 ml-2 mb-12">Autos</span>
   </div>
   <div class="grid grid-cols-1  text-slate-50">

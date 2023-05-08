@@ -3,7 +3,7 @@
   
   <div class="flex py-10 bg-slate-100 h-full ">
     <div class="bg-white shadow-md py-20 mx-20 px-10 h-full">
-  <img src="/src/assets/girl.jpg" class="h-40 w-40 mx-24 rounded-full">
+  <img src="/assets/girl.jpg" class="h-40 w-40 mx-24 rounded-full">
   <div>
   <div class="flex justify-center mb-4">
     <div class="">
@@ -24,11 +24,11 @@
   <!-- posts -->
   <div class="bg-white grid grid-cols-1 shadow-md py-5">
      <div class="flex px-5">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <h1 class="my-2 mx-2">Mighty Shambel</h1>
      </div>
      <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
-    <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+    <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
     <h1>Lidaya dagnaw and 4 others liked this picture</h1>
     <div class="grid grid-cols-3 mx-20 mt-3 ">
         <div class="flex">
@@ -55,11 +55,11 @@
   </div>
   <div class=" bg-white grid grid-cols-1 shadow-md py-5 my-5">
      <div class="flex px-5">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <h1 class="my-2 mx-2">Mighty Shambel</h1>
      </div>
      <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
-    <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+    <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
     <h1>Lidaya dagnaw and 4 others liked this picture</h1>
     <div class="grid grid-cols-3 mx-20 mt-3 ">
         <div class="flex">
@@ -91,7 +91,7 @@
 <div class="lg:hidden lg:block">
 <div class=" bg-white  py-20 mx-5 px-5 h-full">
   <div class="flex justify-center">
-    <img src="/src/assets/girl.jpg" class="h-24 w-24 rounded-full">
+    <img src="/assets/girl.jpg" class="h-24 w-24 rounded-full">
   </div>
   
   <div>
@@ -110,11 +110,11 @@
   </div>  
   <div class="bg-white grid grid-cols-1 shadow-md py-5">
     <div class="flex px-5">
-     <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+     <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
      <h1 class="my-2 mx-2">Mighty Shambel</h1>
     </div>
     <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
-   <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+   <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
    <h1>Lidaya dagnaw and 4 others liked this picture</h1>
    <div class="grid grid-cols-3  mt-3 ">
        <div class="flex">

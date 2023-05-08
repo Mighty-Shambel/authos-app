@@ -11,7 +11,7 @@
 </svg>
    </div>
     <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Mighty Shambel</h1>
        <h6 class="text-sm mb-2">Health Professional</h6>
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Meklit Seife</h1>
        <h6 class="text-sm mb-2">Parent</h6>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Brightside Org</h1>
        <h6 class="text-sm mb-2">Organization</h6>
@@ -56,7 +56,7 @@
        </div>
     <div class=" flex justify-between">
         <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Lidya Dagnaw</h1>
        <h6 class="text-sm mb-2">Ayoo whachu doing?</h6>
@@ -68,7 +68,7 @@
     </div>
     <div class="flex justify-between">
         <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Meklit Seife</h1>
        <h6 class="text-sm mb-2">Playing and u?</h6>
@@ -80,7 +80,7 @@
     </div>
     <div class="flex justify-between">
         <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Meklit Seife</h1>
        <h6 class="text-sm mb-2">Please give me my money back!!</h6>
@@ -92,7 +92,7 @@
     </div>
     <div class="flex justify-between">
         <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Meklit Seife</h1>
        <h6 class="text-sm mb-2">Bitches come and go</h6>
@@ -126,7 +126,7 @@
    </div>
 
     <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">how are you?</h1>
       </div>
@@ -135,10 +135,10 @@
       <div class="mx-2">
        <h1 class="border-2 border-primary rounded-tr-lg rounded-bl-lg rounded-tl-lg px-2 py-2 ">am good how are you??</h1>
       </div>
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full"> 
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full"> 
     </div>
     <div class="flex  px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">have you seen meklit today?</h1>
       </div>
@@ -147,10 +147,10 @@
       <div class="mx-2">
        <h1 class="border-2 border-primary rounded-tr-lg rounded-bl-lg rounded-tl-lg px-2 py-2 ">No,i haven't</h1>
       </div>
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     </div>
     <div class="flex  px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">her mom has been calling me all day she is worried</h1>
       </div>
@@ -178,7 +178,7 @@
     <div class="flex justify-between pl-5  bottom-0 z-50 bg-white shadow-md py-2  px-5">
       <!-- Navbar -->
       <div>
-      <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
+      <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
       </div>
       <div class="text-primary text-2xl">autos</div>
       <div>
@@ -209,7 +209,7 @@
      <router-link :to="{name:'Chat'}">
   <div class=" flex justify-between">
       <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Lidya Dagnaw</h1>
      <h6 class="text-sm mb-2">Ayoo whachu doing?</h6>
@@ -222,7 +222,7 @@
 </router-link>
   <div class="flex justify-between">
       <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Meklit Seife</h1>
      <h6 class="text-sm mb-2">Playing and u?</h6>
@@ -234,7 +234,7 @@
   </div>
   <div class="flex justify-between">
       <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Meklit Seife</h1>
      <h6 class="text-sm mb-2">Please give me my money back!!</h6>
@@ -246,7 +246,7 @@
   </div>
   <div class="flex justify-between">
       <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Meklit Seife</h1>
      <h6 class="text-sm mb-2">Bitches come and go</h6>
@@ -280,7 +280,7 @@
   </div>
  </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">how are you?</h1>
     </div>
@@ -289,10 +289,10 @@
     <div class="mx-2">
      <h1 class="border-2 border-primary rounded-tr-lg rounded-bl-lg rounded-tl-lg px-2 py-2 ">am good how are you??</h1>
     </div>
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full"> 
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full"> 
   </div>
   <div class="flex  px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">have you seen meklit today?</h1>
     </div>
@@ -301,10 +301,10 @@
     <div class="mx-2">
      <h1 class="border-2 border-primary rounded-tr-lg rounded-bl-lg rounded-tl-lg px-2 py-2 ">No,i haven't</h1>
     </div>
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
   </div>
   <div class="flex  px-4 mb-60">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1 class="border-2 border-primary rounded-tr-lg rounded-br-lg rounded-tl-lg px-2 py-2 ">her mom has been calling me all day she is worried</h1>
     </div>
@@ -349,7 +349,7 @@
   </router-link>
     <!-- profile -->
     <div>
-      <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
+      <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
         </div>
   </div>
   </div>

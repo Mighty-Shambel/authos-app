@@ -10,7 +10,7 @@
        
       </div>
       <div class="flex pb-5  pt-5 mb-5 shadow-md px-3"> 
-        <img class="w-12 h-12 rounded-md mr-20" src="/src/assets/symptom.jpg" alt="the first">
+        <img class="w-12 h-12 rounded-md mr-20" src="/assets/symptom.jpg" alt="the first">
         <p class="grid pl-5 pt-2 mr-20">Mighty Shambel</p>
         <p class="grid pl-5 pt-2">Health Professional </p>
         <p class="grid pl-16 pt-2">Shambelmighty51@gmail.com</p>
@@ -21,7 +21,7 @@
        
       </div>
       <div class="flex pb-5  pt-5 mb-5 shadow-md px-3"> 
-        <img class="w-12 h-12 rounded-md mr-20" src="/src/assets/symptom.jpg" alt="the first">
+        <img class="w-12 h-12 rounded-md mr-20" src="/assets/symptom.jpg" alt="the first">
         <p class="grid pl-5 pt-2 mr-20">Mighty Shambel</p>
         <p class="grid pl-5 pt-2">Health Professional</p>
         <p class="grid pl-16 pt-2">Shambelmighty51@gmail.com</p>
@@ -32,7 +32,7 @@
       
       </div>
        <div class="flex pb-5  pt-5 mb-5 shadow-md px-3"> 
-        <img class="w-12 h-12 rounded-md mr-20" src="/src/assets/symptom.jpg" alt="the first">
+        <img class="w-12 h-12 rounded-md mr-20" src="/assets/symptom.jpg" alt="the first">
         <p class="grid pl-5 pt-2 mr-20">Mighty Shambel</p>
         <p class="grid pl-5 pt-2">Health Professional </p>
         <p class="grid pl-16 pt-2">Shambelmighty51@gmail.com</p>

@@ -10,7 +10,7 @@
           <span class="ml-16">Delete</span>
         </div>
       <div class=" flex rounded-xl items-center shadow-md mb-5 ">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/auth.webp">What is Autism<p class="ml-20">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/auth.webp">What is Autism<p class="ml-20">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateDefinition'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -43,7 +43,7 @@
     
       </div>
       <div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/categories.jpg">Categories of Autism<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/categories.jpg">Categories of Autism<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateCategories'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -62,7 +62,7 @@
     </svg>
     
       </div><div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/causes.jpeg">Causes of Autism<p class="ml-16">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/causes.jpeg">Causes of Autism<p class="ml-16">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateCauses'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -81,7 +81,7 @@
     </svg>
     
       </div><div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/symptom.jpg">Symptoms of Autism<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/symptom.jpg">Symptoms of Autism<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateSymptom'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -102,7 +102,7 @@
       </div>
      
       <div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/food.jpeg">Recomended Foods<p class="ml-16">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/food.jpeg">Recomended Foods<p class="ml-16">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateFood'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -122,7 +122,7 @@
     
       </div>
       <div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/food.jpeg">Not Recomended Foods<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/food.jpeg">Not Recomended Foods<p class="ml-10">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateNotRecomended'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -142,7 +142,7 @@
     
       </div>
       <div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/doctors.jpg">Doctor Recomendations<p class="ml-12">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/doctors.jpg">Doctor Recomendations<p class="ml-12">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateDoctors'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -161,7 +161,7 @@
     </svg>
     
       </div><div class=" flex rounded-xl items-center shadow-md mb-5">
-        <img class="w-60 rounded-xl mr-10" src="/src/assets/organization.jpg">Organization Recomenda..<p class="ml-8">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
+        <img class="w-60 rounded-xl mr-10" src="/assets/organization.jpg">Organization Recomenda..<p class="ml-8">Autism is also known as <br> Autism Spectrum Disorder<br> (ASD). ‘Spectrum’</p>
         <router-link :to="{name:'CreateOrganization'}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue" class="w-6 h-6 ml-16">
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
@@ -203,7 +203,8 @@
       </div>
     </div>
     <Div v-if="viewModal" class="absolute inset-0 z-40 opacity-25 bg-black"></Div>
-      </div> 
+      </div>
+
       </div>  
     </template>
     

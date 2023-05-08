@@ -3,7 +3,7 @@
      <div class="grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-20  mr-48 pr-60 pt-10">
 <div class="py-5 px-3"> 
   <div class="flex pb-5 shadow md pl-10 pt-5 mb-10"> 
-      <img class="w-16 h-16 rounded-full" src="/src/assets/symptom.jpg" alt="the first">
+      <img class="w-16 h-16 rounded-full" src="/assets/symptom.jpg" alt="the first">
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>
@@ -12,7 +12,7 @@
       
     </div>
     <div class="flex pb-5 shadow md pl-10 pt-5 mb-10"> 
-      <img class="w-16 h-16 rounded-full" src="/src/assets/symptom.jpg" alt="the first">
+      <img class="w-16 h-16 rounded-full" src="/assets/symptom.jpg" alt="the first">
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>
@@ -20,7 +20,7 @@
       <span @click="detailsModal=!detailsModal" class="pt-3 ml-40 mr-5 ">Details</span>
     </div>
     <div class="flex pb-5 shadow md pl-10 pt-5"> 
-      <img class="w-16 h-16 rounded-full" src="/src/assets/symptom.jpg" alt="the first">
+      <img class="w-16 h-16 rounded-full" src="/assets/symptom.jpg" alt="the first">
       <p class="grid pl-5 pt-2">Mighty Shambel
         <span class="">Parent</span>
       </p>

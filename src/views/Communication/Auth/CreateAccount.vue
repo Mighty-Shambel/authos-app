@@ -161,4 +161,28 @@
 <script setup>
 import BaseInput from "../../../components/BaseInput.vue";
 import Socialmedia from "../../../components/Communication/Socialmedia.vue";
+import axios from 'axios';
+
+// Make a GET request
+axios.get('/api/users')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// Make a POST request
+const data = {
+  username: 'john_doe',
+  email: 'john_doe@example.com'
+};
+
+axios.post('/api/users', data)
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 </script>

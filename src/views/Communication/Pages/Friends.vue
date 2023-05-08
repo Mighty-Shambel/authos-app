@@ -11,7 +11,7 @@
 </svg>
    </div>
    <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -22,7 +22,7 @@
     </svg>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -33,7 +33,7 @@
     </svg>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -43,7 +43,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
     </svg>
   </div> <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -54,7 +54,7 @@
     </svg>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -66,7 +66,7 @@
   </div>
    
     <div class="flex px-4 mb-2">
-      <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <div class="mx-2">
        <h1>Mighty Shambel</h1>
        <h6 class="text-sm mb-2">Health Professional</h6>
@@ -136,7 +136,7 @@
         <div class="flex justify-between pl-5  bottom-0 z-50 bg-white  py-2  px-5">
           <!-- Navbar -->
           <div>
-          <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
+          <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
           </div>
           <div class="text-primary text-2xl">autos</div>
           <div>
@@ -149,7 +149,7 @@
       </div>
     <div class="flex justify-between px-4 mb-5 mt-10">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -164,7 +164,7 @@
     </div>
     <div class="flex justify-between px-4 mb-5">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -179,7 +179,7 @@
     </div>
     <div class="flex justify-between px-4 mb-5">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -194,7 +194,7 @@
     </div>
     <div class="flex justify-between px-4 mb-5">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -209,7 +209,7 @@
     </div>
     <div class="flex justify-between px-4 mb-5">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -224,7 +224,7 @@
     </div>
     <div class="flex justify-between px-4 mb-5">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -239,7 +239,7 @@
     </div>
     <div class="flex justify-between px-4 pb-20">
       <div class="flex">
-        <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
         <div class="mx-2">
          <h1>Mighty Shambel</h1>
          <h6 class="text-sm mb-2">Health Professional</h6>
@@ -277,7 +277,7 @@
     </router-link>
       <!-- profile -->
       <div>
-        <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
+        <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
           </div>
     </div>
   </div>

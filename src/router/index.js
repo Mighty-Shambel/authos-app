@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import vlog from "../views/awareness/vlog.vue"
+
 //home pages
-import AwarenessView from '../views/AwarenessView'
 import LandingPage from "../views/Home/LandingPage.vue"
 import About from "../views/Home/About.vue";
 import Contactus from "../views/Home/Contactus.vue";
@@ -26,14 +25,7 @@ import ChatList from "../views/Communication/Pages/ChatList.vue"
 
 //Awareness pages
 import AwarenessBlog from "../views/Awareness/AwarenessBlog.vue";
-import Categories from "../views/Awareness/Categories.vue";
-import Causes from "../views/Awareness/Causes.vue";
-import Definition from "../views/Awareness/Definition.vue";
-import Doctors from "../views/Awareness/Doctors.vue";
-import NotRecomended from "../views/Awareness/NotRecomended.vue";
-import OrganizationRec from "../views/Awareness/OrganizationRec.vue";
-import Recomended from "../views/Awareness/Recomended.vue";
-import Symptom from "../views/Awareness/Symptom.vue";
+import AwarenessView from '../views/awareness/AwarenessView'
 import AwarenessLayout from '../layouts/AwarenessLayout.vue'
 import CommunicationLayout from '../layouts/CommunicationLayout.vue'
 //Admin pages
@@ -77,11 +69,6 @@ const router = createRouter({
       path:'/awareness/:id',
       name:'AwarenessView',
       component:AwarenessView
-    },
-    {
-     path:'/vlog',
-     name:'vlog',
-     component:vlog
     },
     //home pages
     {
@@ -136,46 +123,7 @@ const router = createRouter({
       name: "AwarenessBlog",
       component: AwarenessBlog,
     },
-    {
-      path: "/categories",
-      name: "Categories",
-      component: Categories,
-    },
-    {
-      path: "/causes",
-      name: "Causes",
-      component: Causes,
-    },
-    {
-      path: "/definition",
-      name: "Definition",
-      component: Definition,
-    },
-    {
-      path: "/doctors",
-      name: "Doctors",
-      component: Doctors,
-    },
-    {
-      path: "/notrecomended",
-      name: "NotRecomended",
-      component: NotRecomended,
-    },
-    {
-      path: "/organizationrec",
-      name: "OrganizationRec",
-      component: OrganizationRec,
-    },
-    {
-      path: "/recomended",
-      name: "Recomended",
-      component: Recomended,
-    },
-    {
-      path: "/symptom",
-      name: "Symptom",
-      component: Symptom,
-    },
+    
   ]
 },
     //communication pages

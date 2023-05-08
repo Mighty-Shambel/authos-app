@@ -10,7 +10,7 @@
 </svg>
  </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Mighty Shambel</h1>
      <h6 class="text-sm mb-2">Health Professional</h6>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Meklit Seife</h1>
      <h6 class="text-sm mb-2">Parent</h6>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Brightside Org</h1>
      <h6 class="text-sm mb-2">Organization</h6>
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="flex px-4 mb-2">
-    <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+    <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
     <div class="mx-2">
      <h1>Lidya Dagnaw</h1>
      <h6 class="text-sm mb-2">Parent</h6>
@@ -47,11 +47,11 @@
 <div class="flex-1 py-5 ">
  <div class=" ml-20 mr-40 bg-white grid grid-cols-1 shadow-md py-5">
   <div class="flex px-5">
-   <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+   <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
    <h1 class="my-2 mx-2">Mighty Shambel</h1>
   </div>
   <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
- <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+ <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
  <h1>Lidaya dagnaw and 4 others liked this picture</h1>
  <div class="grid grid-cols-3 mx-20 mt-3 ">
      <div class="flex">
@@ -91,24 +91,24 @@
  <div class=" ">
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
      </div>
   
@@ -120,13 +120,13 @@
 </div>
 </div>
 <!-- Notification for mobile -->
-<div>
+<div class="lg:hidden lg:block ">
   <div class=" pl-5 shadow-md bottom-0 z-50 py-2 ">
     <!-- Icons -->
     <div class="flex justify-between pl-5  bottom-0 z-50 bg-white  py-2  px-5">
       <!-- Navbar -->
       <div>
-      <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
+      <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
       </div>
       <div class="text-primary text-2xl">autos</div>
       <div>
@@ -138,41 +138,41 @@
     </div>
   <div class="flex justify-between mt-10">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   <div class="flex justify-between mt-5 mb-72 pb-14">
     <div class="flex">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-3">
      <p class=""> Mighty shambel liked your pic </p>
     </div>
-     <img src="/src/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
+     <img src="/assets/doctors.jpg" class="h-10 w-10 rounded-lg mx-2">
   </div>
   
-<div class="grid grid-cols-5 pl-5  bottom-0 z-50 bg-primary shadow-md py-2 ">
+<div class="grid grid-cols-5 pl-5  bottom-0 z-50 bg-primary shadow-md py-2">
   <!-- Icons -->
    <router-link :to="{name:'Feed'}"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -196,7 +196,7 @@
   </router-link>
     <!-- profile -->
     <div>
-      <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
+      <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-6 w-6"></router-link>
         </div>
   </div>
 </div>

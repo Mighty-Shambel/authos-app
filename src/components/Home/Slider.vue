@@ -1,5 +1,5 @@
 <template>
-    <Splide :options="options" aria-label="My Favorite Images"  class="my-10" >
+    <Splide :options="options" aria-label="My Favorite Images"  class="my-10 " >
       <SplideSlide>
         <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <div >

@@ -11,7 +11,7 @@
 </svg>
     </div>
      <div class="flex px-4 mb-2">
-       <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+       <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
        <div class="mx-2">
         <h1>Mighty Shambel</h1>
         <h6 class="text-sm mb-2">Health Professional</h6>
@@ -19,7 +19,7 @@
        </div>
      </div>
      <div class="flex px-4 mb-2">
-       <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+       <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
        <div class="mx-2">
         <h1>Meklit Seife</h1>
         <h6 class="text-sm mb-2">Parent</h6>
@@ -27,7 +27,7 @@
        </div>
      </div>
      <div class="flex px-4 mb-2">
-       <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+       <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
        <div class="mx-2">
         <h1>Brightside Org</h1>
         <h6 class="text-sm mb-2">Organization</h6>
@@ -35,7 +35,7 @@
        </div>
      </div>
      <div class="flex px-4 mb-2">
-       <img src="src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+       <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
        <div class="mx-2">
         <h1>Lidya Dagnaw</h1>
         <h6 class="text-sm mb-2">Parent</h6>
@@ -48,16 +48,16 @@
   <div class="flex-1 py-5 ">
     <!-- create post -->
     <div class="flex shadow-md ml-20 mr-64 mb-5 py-5"> 
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-5">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-5">
       <h1 @click="postModal=!postModal"  class="border border-2 bg-slate-100  w-96 px-4 py-2 rounded-full">create a post</h1>
     </div>
     <div class=" ml-20 mr-64 bg-white grid grid-cols-1 shadow-md py-5">
      <div class="flex px-5">
-      <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+      <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
       <h1 class="my-2 mx-2">Mighty Shambel</h1>
      </div>
      <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
-    <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+    <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
     <h1>Lidaya dagnaw and 4 others liked this picture</h1>
     <div class="grid grid-cols-3 mx-20 mt-3 ">
         <div class="flex">
@@ -145,7 +145,7 @@
     <div class="flex justify-between pl-5  bottom-0 z-50 bg-white shadow-md py-2  px-5">
       <!-- Navbar -->
       <div>
-      <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
+      <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-8 w-8"></router-link>
       </div>
       <div class="text-primary text-2xl">autos</div>
       <div>
@@ -156,17 +156,17 @@
       </div>
       <!-- create post -->
       <div class="flex  justify-center mt-10 mx-20 shadow-md mb-5 py-3"> 
-        <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full mx-5">
+        <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full mx-5">
         <h1 @click="postModal=!postModal"  class="border border-2 bg-slate-100  w-96 px-4 py-2 rounded-full">create a post</h1>
       </div>
     <div class=" bg-white mx-5 px-5 h-full">
   <div class="bg-white grid grid-cols-1 shadow-md py-5">
     <div class="flex px-5">
-     <img src="/src/assets/girl.jpg" class="h-10 w-10 rounded-full">
+     <img src="/assets/girl.jpg" class="h-10 w-10 rounded-full">
      <h1 class="my-2 mx-2">Mighty Shambel</h1>
     </div>
     <h1 class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora veritatis aut,<br> tenetur eum nesciunt exercitationem aliquid necessitatibus dolore</h1>
-   <img src="/src/assets/doctors.jpg" class="py-1 w-full h-96">
+   <img src="/assets/doctors.jpg" class="py-1 w-full h-96">
    <h1>Lidaya dagnaw and 4 others liked this picture</h1>
    <div class="grid grid-cols-3  mt-3 ">
        <div class="flex">

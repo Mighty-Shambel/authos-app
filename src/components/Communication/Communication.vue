@@ -1,9 +1,9 @@
 <template>
-    <div class="flex-1">
+    <div class="flex-1 sticky top-0 z-50 hidden lg:block ">
         <div class=" flex justify-between bg-primary shadow-md px-4 py-2">
           <!-- profile -->
             <div>
-                <router-link :to="{name:'Profile'}"><img src="/src/assets/girl.jpg" class="rounded-full h-10 w-10"></router-link>
+                <router-link :to="{name:'Profile'}"><img src="/assets/girl.jpg" class="rounded-full h-10 w-10"></router-link>
             <p class="text-sm text-white">Mighty</p>
             </div>
             <!-- search bar -->
