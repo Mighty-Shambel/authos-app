@@ -18,15 +18,24 @@
       "image": "/assets/causes.jpeg",
       "id": 3,
       "desc":"There are some known symptoms for autism ",
-      "detail":"1. Genetics. Several different genes appear to be involved in autism spectrum disorder. For some children, autism spectrum disorder can be associated with a genetic disorder, such as Rett syndrome or fragile X syndrome. For other children, genetic changes (mutations) may increase the risk of autism spectrum disorder. Still other genes may affect brain development or the way that brain cells communicate, or they may determine the severity of symptoms. Some genetic mutations seem to be inherited, while others occur spontaneously.2.Environmental factors. Researchers are currently exploring whether factors such as viral infections, medications or complications during pregnancy, or air pollutants play a role in triggering autism spectrum disorder."
+      "detail":
+      [
+        { "Genetics":"Several different genes appear to be involved in autism spectrum disorder. For some children, autism spectrum disorder can be associated with a genetic disorder, such as Rett syndrome or fragile X syndrome. For other children, genetic changes (mutations) may increase the risk of autism spectrum disorder. Still other genes may affect brain development or the way that brain cells communicate, or they may determine the severity of symptoms. Some genetic mutations seem to be inherited, while others occur spontaneously."},
+        { "Environmental factors":"Researchers are currently exploring whether factors such as viral infections, medications or complications during pregnancy, or air pollutants play a role in triggering autism spectrum disorder."}
+      ] 
     },
     {
       "title": "Categories of Autism",
       "image": "/assets/categories.jpg",
       "id": 4,
       "desc":"There are some known symptoms for autism ",
-      "detail":"1.Asperger’s Syndrome:Although the term Asperger’s syndrome was quite common before 2013, the term is actually no longer used by medical professionals. It has since been reclassified as level 1 autism spectrum disorder by the DSM-5 diagnostic manual. Still, Asperger’s syndrome may be used informally — in fact, autism communities use it more often than level 1 spectrum disorder 2.Rett Syndrome:Rett syndrome is a rare neurodevelopmental disorder that is noticed in infancy. The disorder mostly affects girls, although it can still be diagnosed in boys. Rett syndrome presents challenges that affect almost every aspect of a child's life. The good thing is your child can still enjoy and live a fulfilling life with the proper care. You can have family time together and provide support to allow the child to do what they enjoy.3.Childhood Disintegrative Disorder (CDD):Childhood disintegrative disorder (CDD), also known as Heller's syndrome or disintegrative psychosis, is a neurodevelopmental disorder defined by delayed onset of developmental problems in language, motor skills, or social function. A child experiences normal development in these areas only to hit a snag after age three and up to age 10. The developmental loss can be very heartbreaking for parents who had no idea their child had autism challenges all along."
-    },
+      "detail":[
+        {"1.":"Asperger’s Syndrome:Although the term Asperger’s syndrome was quite common before 2013, the term is actually no longer used by medical professionals. It has since been reclassified as level 1 autism spectrum disorder by the DSM-5 diagnostic manual. Still, Asperger’s syndrome may be used informally — in fact, autism communities use it more often than level 1 spectrum disorder "},
+        {"2.":"Rett Syndrome:Rett syndrome is a rare neurodevelopmental disorder that is noticed in infancy. The disorder mostly affects girls, although it can still be diagnosed in boys. Rett syndrome presents challenges that affect almost every aspect of a child's life. The good thing is your child can still enjoy and live a fulfilling life with the proper care. You can have family time together and provide support to allow the child to do what they enjoy."},
+        {"3.":"Childhood Disintegrative Disorder (CDD):Childhood disintegrative disorder (CDD), also known as Heller's syndrome or disintegrative psychosis, is a neurodevelopmental disorder defined by delayed onset of developmental problems in language, motor skills, or social function. A child experiences normal development in these areas only to hit a snag after age three and up to age "},
+        {"4.":"The developmental loss can be very heartbreaking for parents who had no idea their child had autism challenges all along."}
+    ]
+  },
     {
       "title": "Recomended Food",
       "image": "/assets/food.jpeg",
@@ -47,15 +56,18 @@
       "id": 7,
       "desc":"There are some known symptoms for autism ",
       "detail":[
-        {"Name":"Doctor Gebeyehu"},
-        {"Works at": "Nehemia in Addis Ababa"},
-        {"Experiance":"6 years"},
-        {"contact":"099987665"},
-    
-        {"Name":"Doctor Almayehu sisay"},
-        {"Works at": "Joy in Addis Ababa"},
-        {"Experiance":"2 years"},
-        {"contact":"099987665"}
+        {
+          "name": "Doctor Gebeyehu",
+          "worksAt": "Nehemia in Addis Ababa",
+          "experience": "6 years",
+          "contact": "099987665"
+        },
+        {
+          "name": "Doctor Almayehu Sisay",
+          "worksAt": "Joy in Addis Ababa",
+          "experience": "2 years",
+          "contact": "099987665"
+        }
       
       ]
     },
@@ -64,6 +76,16 @@
       "image": "/assets/organization.jpg",
       "id": 8,
       "desc":"There are some known symptoms for autism ",
-      "detail":"1:Nehemia-Rahel Abayneh, Founder and Director of Nehemiah Autism Center, on her part said, she is pleased to have Abay Bank's staff for visiting and showing love and partnership to the center, and extended her appreciation to Abay Bank for its support at large.2:Joy-Autism is a kind of neural development disorder in children. 0.67% of infants globally are diagnosed with this condition and it’s symptomatically visible in the first 3 years of life, largely distinguished as weakening public interaction and repetitive or restricted behaviour. It alters the normal processing of information in the human brain by restricting or disturbing the organization and interconnection of nerve cells with their synapses. No certain cause or reason has been defined or suggested that may lead to the condition of Autism; neurological impairment, immunological deficiency or certain environmental factors are considered as major attribution to Autism."
+      "detail":[
+        {
+          "Name":" Nehemia",
+          "Description":"Rahel Abayneh, Founder and Director of Nehemiah Autism Center, on her part said, she is pleased to have Abay Bank's staff for visiting and showing love and partnership to the center, and extended her appreciation to Abay Bank for its support at large."
+        },
+        {
+          "Name":"Joy-Autism",
+          "Description":"Autism is a kind of neural development disorder in children. 0.67% of infants globally are diagnosed with this condition and it’s symptomatically visible in the first 3 years of life, largely distinguished as weakening public interaction and repetitive or restricted behaviour. "
+        }
+      ]
+       
     }
   ]

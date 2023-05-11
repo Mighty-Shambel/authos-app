@@ -5,27 +5,17 @@
      <socialmedia></socialmedia>
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-44 lg:pl-20 md:pt-10 bg-white  ">
     <div class="w-full max-w-md space-y-8">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.25 4 5.75 6">
-  <path d="M 2 4 C 1 4 1 5 2 5 C 1 5 1 6 2 6 C 1 6 1 7 2 7 C 1 7 1 8 2 8 C 1 8 1 9 2 9 C 1 9 1 10 2 10 M 7 5" fill=""/>
-</svg> -->
       <div>
         <h2  class="text-center text-2xl font-semibold tracking-tight text-gray-900">Log in</h2>
       </div>
-      <form class="mt-8 space-y-5" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <form class="mt-8 space-y-5" @submit.prevent="login">
         <div class=" rounded-md shadow-sm mb-3">
           <!-- Using Basinput component for the forms -->
           <div class="pb-2" >
-            <base-input
-            type="email"
-            label="Email"
-            />
+            <BaseInput v-model="formData.email" label="Email" name="email" inputType="email" validationRules="required|email" placeholder="email" />
           </div>
           <div class="pb-2" >
-            <base-input
-            type="password"
-            label="Password"
-            />
+           <BaseInput v-model="formData.password" label="Password" name="password" inputType="password" validationRules="required|min:8" placeholder="password" />
           </div>
         </div>
 
@@ -41,7 +31,7 @@
         </div>
 
         <div>
-          <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <button @click="login" type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
             </span>
@@ -58,23 +48,17 @@
   <div class="xl:hidden lg:block flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-40">
     <div class="w-full max-w-md space-y-8 shadow-md p-5">
       <div>
-        <h2   class="text-center text-2xl font-semibold tracking-tight text-gray-900">Log in</h2>
+        <h2   type="submit" class="text-center text-2xl font-semibold tracking-tight text-gray-900">Log in</h2>
       </div>
       <!-- Forms for mobile using baseinput -->
-      <form class="mt-8 space-y-5" action="#" method="POST">
+      <form @submit.prevent="login" class="mt-8 space-y-5" >
         <input type="hidden" name="remember" value="true" />
         <div class=" rounded-md shadow-sm mb-3">
           <div class="pb-2" >
-            <base-input
-            type="email"
-            label="Email"
-            />
+            <BaseInput v-model="formData.email" label="Email" name="email" inputType="email" validationRules="required|email" placeholder="email" />
           </div>
           <div class="pb-2" >
-            <base-input
-            type="password"
-            label="Password"
-            />
+            <BaseInput v-model="formData.password" label="Password" name="password" inputType="password" validationRules="required|min:8" placeholder="password" />
           </div>
         </div>
 
@@ -90,7 +74,7 @@
         </div>
 
         <div>
-          <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <button  type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
             </span>
@@ -103,12 +87,26 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import BaseInput from '../../../components/BaseInput.vue';
 import Socialmedia from '../../../components/Communication/Socialmedia.vue';
-  components: { BaseInput,Socialmedia }
+export default {
+  components: {
+    BaseInput,
+    Socialmedia
+  },
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    login() {
+        console.log('Form data', this.formData);
+    },
+  },
+};
 </script>
-
-<style>
-
-</style>

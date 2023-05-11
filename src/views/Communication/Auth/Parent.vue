@@ -15,22 +15,13 @@
       <input type="hidden" name="remember" value="true" />
       <div class="-space-y-px rounded-md shadow-sm">
         <div class="pb-2">
-       <base-input
-       label="First Name"
-       type="text"
-       />
+          <BaseInput v-model="formData.firstName" label="First Name" name="fname" inputType="text" validationRules="required" placeholder="first name" />
         </div>
         <div class="pb-2">
-          <base-input
-       label="Last Name"
-       type="text"
-       />
+          <BaseInput v-model="formData.lastName" label="Last Name" name="lname" inputType="text" validationRules="required" placeholder="last name" />
          </div>
         <div class="pb-2" >
-          <base-input
-          label="Phone"
-          type="number"
-          />
+          <BaseInput v-model="formData.phone" label="Phone" name="number" inputType="number" validationRules="required" placeholder="phone" />
       </div>
       <div>
           <label
@@ -94,26 +85,22 @@
           <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Parent</h2>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true" />
+    <form @submit.prevent="submitForm" class="mt-8 space-y-6">
       <div class="-space-y-px rounded-md shadow-sm">
         <div class="pb-2">
-          <base-input
-          label="First Name"
-          type="text"
-          />
-           </div>
-        <div class="pb-2">
-          <base-input 
-          label="Last Name"
-          type="text"
-          />
+          <BaseInput v-model="formData.firstName" label="First Name" name="fname" inputType="text" validationRules="required" placeholder="first name" />
         </div>
+        <div class="pb-2">
+          <BaseInput v-model="formData.lastName" label="Last Name" name="lname" inputType="text" validationRules="required" placeholder="last name" />
+         </div>
         <div class="pb-2" >
-        <base-input 
-        label="Phone"
-        type="number"
-        />
+          <BaseInput v-model="formData.phone" label="Phone" name="number" inputType="number" validationRules="required" placeholder="phone" />
+      </div>
+      <div>
+        <select v-model="selectedItem">
+          <option v-for="item in dropdownItems" :value="item">{{ item }}</option>
+        </select>
+        <p>Selected item: {{ selectedItem }}</p>
       </div>
       <div>
           <label
@@ -171,9 +158,29 @@
       </div>
     </template>
     
-    <script setup>
+    <script >
     import BaseInput from '../../../components/BaseInput.vue';
      import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+// export default {
+//   data() {
+//     return {
+//       selectedItem: '',
+//       dropdownItems: ['Option 1', 'Option 2', 'Option 3'] // Replace with your actual dropdown items
+//     };
+//   }
+// };
+     export default{
+     components:{BaseInput,Socialmedia},
+      data(){
+      return{
+       formData:{
+        firstName,
+        lastName,
+        phone,
+       }
+      }
+      }
+     }
     </script>
     
     <style>
