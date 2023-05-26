@@ -11,11 +11,17 @@
       <form class="mt-8 space-y-5" @submit.prevent="login">
         <div class=" rounded-md shadow-sm mb-3">
           <!-- Using Basinput component for the forms -->
-          <div class="pb-2" >
-            <BaseInput v-model="formData.email" label="Email" name="email" inputType="email" validationRules="required|email" placeholder="email" />
+          <div>
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
-          <div class="pb-2" >
-           <BaseInput v-model="formData.password" label="Password" name="password" inputType="password" validationRules="required|min:8" placeholder="password" />
+          <div>
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+            <div class="mt-2">
+              <input v-model="formData.password" id="password" name="password" type="password" autocomplete="password" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
         </div>
 
@@ -31,10 +37,10 @@
         </div>
 
         <div>
-          <button @click="login" type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-            </span>
+          <button type="button"
+          @click="login"
+          class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            
             Log in
           </button>
           <span class="text-slate-400">Don't have account? <router-link :to="{name:'CreateAccount'}" class="text-primary text-semibold"> Sign up</router-link> </span>
@@ -54,11 +60,17 @@
       <form @submit.prevent="login" class="mt-8 space-y-5" >
         <input type="hidden" name="remember" value="true" />
         <div class=" rounded-md shadow-sm mb-3">
-          <div class="pb-2" >
-            <BaseInput v-model="formData.email" label="Email" name="email" inputType="email" validationRules="required|email" placeholder="email" />
+          <div>
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
-          <div class="pb-2" >
-            <BaseInput v-model="formData.password" label="Password" name="password" inputType="password" validationRules="required|min:8" placeholder="password" />
+          <div>
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+            <div class="mt-2">
+              <input v-model="formData.password" id="password" name="password" type="password" autocomplete="password" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
         </div>
 
@@ -74,10 +86,8 @@
         </div>
 
         <div>
-          <button  type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-            </span>
+          <button type="button"
+          @click="login" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             Log in
           </button>
           <span class="text-slate-400">Don't have account? <router-link :to="{name:'CreateAccount'}" class="text-primary text-semibold"> Sign up</router-link> </span>
@@ -88,11 +98,10 @@
 </template>
 
 <script>
-import BaseInput from '../../../components/BaseInput.vue';
+import axios from 'axios'
 import Socialmedia from '../../../components/Communication/Socialmedia.vue';
 export default {
   components: {
-    BaseInput,
     Socialmedia
   },
   data() {
@@ -104,8 +113,21 @@ export default {
     };
   },
   methods: {
-    login() {
-        console.log('Form data', this.formData);
+   async login() {
+      console.log("form data", this.formData);
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
+        });
+      // console.warn(result)
     },
   },
 };

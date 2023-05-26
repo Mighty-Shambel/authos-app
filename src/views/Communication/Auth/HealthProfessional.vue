@@ -15,30 +15,30 @@
       <input type="hidden" name="remember" value="true" />
       <div class="-space-y-px rounded-md shadow-sm ">
         
-        <div class="pb-2">
-       <base-input 
-       type="text"
-       label="First Name"
-       />
+        <div>
+          <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2">
-          <base-input 
-          type="text"
-          label="Last Name"
-          />
+        <div>
+          <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2" >
-        <base-input
-        type="email"
-        label="Email"
-        />
-      </div>
-      <div class="pb-2" >
-       <base-input
-       type="text"
-       label="Workplace"
-       />
-      </div>
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="workplace" class="block text-sm font-medium leading-6 text-gray-900">Work Place</label>
+          <div class="mt-2">
+            <input  v-model="formData.workplace" id="workplace" name="workplace" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
         <label>Gender</label>
         <div class="flex">
           <div class="flex items-center">
@@ -130,31 +130,30 @@
     <form class="mt-8 space-y-6" action="#" method="POST">
       <input type="hidden" name="remember" value="true" />
       <div class="-space-y-px rounded-md shadow-sm ">
-        
-        <div class="pb-2">
-          <base-input 
-          type="text"
-          label="First Name"
-          />
-           </div>
-           <div class="pb-2">
-             <base-input 
-             type="text"
-             label="Last Name"
-             />
-           </div>
-           <div class="pb-2" >
-           <base-input
-           type="email"
-           label="Email"
-           />
-         </div>
-      <div class="pb-2" >
-        <base-input 
-        type="text"
-        label="Workplace"
-        />
-      </div>
+        <div>
+          <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="workplace" class="block text-sm font-medium leading-6 text-gray-900">Work Place</label>
+          <div class="mt-2">
+            <input  v-model="formData.workplace" id="workplace" name="workplace" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
         <label>Gender</label>
         <div class="flex">
           <div class="flex items-center">
@@ -238,7 +237,6 @@
     </template>
     
     <script setup>
-     import BaseInput from '../../../components/BaseInput' 
      import Socialmedia from '../../../components/Communication/Socialmedia.vue';
     </script>
     

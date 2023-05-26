@@ -54,7 +54,7 @@
       async login() {
         console.log("form data", this.formData);
         axios
-          .post(`http://localhost:3000/api/v1/auth/signin`, this.formData)
+          .post(`http://192.168.8.101:3000/api/v1/auth/signin`, this.formData)
           .then((response) => {
             console.log(response.data.payload.token);
             localStorage.setItem("token", response.data.payload.token)
@@ -67,6 +67,7 @@
         //console.warn(result)
       },
     },
+  
   };
   </script>
   

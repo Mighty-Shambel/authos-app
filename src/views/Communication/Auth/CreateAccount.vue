@@ -5,33 +5,27 @@
     <div class="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 shadow-2xl">
       <socialmedia></socialmedia>
       <div
-        class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-20 lg:pl-20 md:pt-10 bg-white"
-      >
+        class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-20 lg:pl-20 md:pt-10 bg-white">
         <div class="w-full max-w-md space-y-8">
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.25 4 5.75 6">
-      <path d="M 2 4 C 1 4 1 5 2 5 C 1 5 1 6 2 6 C 1 6 1 7 2 7 C 1 7 1 8 2 8 C 1 8 1 9 2 9 C 1 9 1 10 2 10 M 7 5" fill=""/>
-    </svg> -->
           <div>
             <h2
-              class="text-center text-2xl font-semibold tracking-tight text-gray-900"
-            >
+              class="text-center text-2xl font-semibold tracking-tight text-gray-900">
               Create Account
             </h2>
           </div>
-          <form class="mt-8 space-y-6" action="#" method="POST">
-            <input type="hidden" name="remember" value="true" />
+          <form @submit.prevent="submitForm" class="mt-8 space-y-6" >
             <div class="-space-y-px rounded-md shadow-sm">
-              <div class="pb-2">
-               <base-input 
-               type="email"
-               label="Email"
-               />
+              <div>
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                <div class="mt-2">
+                  <input v-model="formData.email" placeholder="email" id="email" name="email" type="email" autocomplete="email" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                </div>
               </div>
-              <div class="pb-2 mb-3">
-                <base-input
-                type="password"
-                label="Password"
-                />
+              <div>
+                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <div class="mt-2">
+                  <input  v-model="formData.password" placeholder="password" id="password" name="password" type="password" autocomplete="password" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                </div>
               </div>
               <div class="pb-2 mb-2">
                <base-input 
@@ -57,7 +51,8 @@
 
             <div>
               <button
-                type="submit"
+              type="button"
+              @click="submitForm"
                 class="mb-3 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -94,29 +89,30 @@
           Create Account
         </h2>
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <form class="mt-8 space-y-6" >
         <div class="-space-y-px rounded-md shadow-sm">
           <div class="pb-2">
-          <base-input 
-          type="email"
-          label="Email"
-          />
-          </div>
-          <div class="pb-2 mb-3">
-           <base-input 
-           type="password"
-           label="Password"
-           />
-          </div>
-          <div class="pb-2 mb-2">
-           <base-input 
-           type="password"
-           label="Confirm Password"
-           />
-          </div>
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+            <div>
+              <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+              <div class="mt-2">
+                <input v-model="formData.password" id="password" name="password" type="password" autocomplete="password" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+
+            <div>
+              <label for="confirmpassword" class="block text-sm font-medium leading-6 text-gray-900">Confirm Password</label>
+              <div class="mt-2">
+                <input v-model="formData.confirmpassword" id="confirmpassword" name="confirmpassword" type="password" autocomplete="password" required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
+            </div>
           <label
-            for="countries"
+            for="usertype"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white pb-3"
             >User Type</label
           >
@@ -133,15 +129,10 @@
 
         <div>
           <button
-            type="submit"
+            type="button"
+            @click="submitForm"
             class="mb-3 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <LockClosedIcon
-                class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
-                aria-hidden="true"
-              />
-            </span>
             Sign up
           </button>
           <span class="text-slate-400"
@@ -153,11 +144,12 @@
             >
           </span>
         </div>
+        </div>
       </form>
     </div>
   </div>
 </template>
-    
+<!--     
 <script setup>
 import BaseInput from "../../../components/BaseInput.vue";
 import Socialmedia from "../../../components/Communication/Socialmedia.vue";
@@ -185,4 +177,43 @@ axios.post('/api/users', data)
   .catch(error => {
     console.log(error);
   });
+</script> -->
+<script>
+import axios from "axios";
+import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+
+export default {
+  components:{Socialmedia},
+  data() {
+    return {
+      formData:{
+        email: "",
+        password: "",
+        user_type: "Parent",
+      }
+    };
+  },
+  methods: {
+   async submitForm() {
+      console.log("form data", this.formData);
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signup`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          // this.$router.push('/systemupdate');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
+        });
+      // console.warn(result)
+    },
+  },
+
+};
 </script>
+
+<style>
+</style>

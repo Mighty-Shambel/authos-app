@@ -14,19 +14,19 @@
       <form class="mt-8 space-y-2" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm ">
-          
-          <div class="pb-2">
-            <base-input 
-            label="Organization Name"
-            type="text"
-            />
+          <div>
+            <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
+            <div class="mt-2">
+              <input  v-model="formData.orgname" id="orgname" name="orgname" type="text" validationRules="required"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
-          <div class="pb-2">
-          <base-input 
-          label="Address"
-          type="text"
-          />
+          <div>
+            <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+            <div class="mt-2">
+              <input  v-model="formData.address" id="address" name="address" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
+  
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
           <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
@@ -72,31 +72,29 @@
       <div>
         <h2 class="mt-4 text-center text-2xl font-semibold tracking-tight text-gray-900">Organization</h2>
       </div>
-      <form class="mt-8 space-y-2" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <form class="mt-8 space-y-2">
         <div class="-space-y-px rounded-md shadow-sm ">
-          
-          <div class="pb-2">
-           <base-input
-           type="text"
-           label="Organization Name"
-           />
+          <div>
+            <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
+            <div class="mt-2">
+              <input  v-model="formData.orgname" id="orgname" name="orgname" type="text" validationRules="required"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
-          <div class="pb-2">
-            <base-input
-          label="Address"
-          type="text"  
-          />
+          <div>
+            <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+            <div class="mt-2">
+              <input  v-model="formData.address" id="address" name="address" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
           </div>
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
           <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
         </div>
-        <div class="pb-2" >
-          <base-input 
-          type="text"
-          label="Bio"
-          />
+        <div>
+          <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
+          <div class="mt-2">
+            <textarea  v-model="formData.bio" id="bio" name="bio" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
         <div class="pb-2">
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">License</label>
@@ -114,23 +112,15 @@
   
         <div>
           <button type="submit" class=" group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-            </span>
             Submit
           </button>
         </div>
       </form>
     </div>
-  </div>
-      
+  </div>  
     </template>
     
     <script setup>
-    import BaseInput from '../../../components/BaseInput.vue';
     import Socialmedia from '../../../components/Communication/Socialmedia.vue';
     </script>
-    
-    <style>
-    
-    </style>
+ 

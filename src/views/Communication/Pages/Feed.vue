@@ -15,7 +15,7 @@
        <div class="mx-2">
         <h1>Mighty Shambel</h1>
         <h6 class="text-sm mb-2">Health Professional</h6>
-        <button class="bg-primary rounded-sm text-white w-24">Follow</button>
+        <button  class="bg-primary rounded-sm text-white w-24">Follow</button>
        </div>
      </div>
      <div class="flex px-4 mb-2">
@@ -225,15 +225,40 @@
 </template>
 
 <script>
+import axios from 'axios';
     export default {
       data(){
     return{
-      postModal:false
+      postModal:false,
+      mydata:''
     }
       },
+      methods:{
+       
+      },
      
+      created(){
     
+
+     try{
+      console.log('mightyyyyyyyyyyyyyyyyyyyyyyyyyyy')
+    axios
+        .get(`http://192.168.8.187:3000/api/v1/post/readAllPosts`)
+        .then((response) => {
+          this.mydata=  response.data.postRead
+          console.log(this.mydata)
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
+        });s
+     }catch(e){
+
+     }
+
+}
     }
+ 
 </script>
 
 <style>

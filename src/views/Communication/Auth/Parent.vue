@@ -11,20 +11,28 @@
     <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Parent</h2>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true" />
+    <form @submit.prevent="submitForm" class="mt-8 space-y-6" >
       <div class="-space-y-px rounded-md shadow-sm">
-        <div class="pb-2">
-          <BaseInput v-model="formData.firstName" label="First Name" name="fname" inputType="text" validationRules="required" placeholder="first name" />
+        <div>
+          <label for="fname" class=" block text-sm font-medium leading-6 text-gray-900">First Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2">
-          <BaseInput v-model="formData.lastName" label="Last Name" name="lname" inputType="text" validationRules="required" placeholder="last name" />
-         </div>
-        <div class="pb-2" >
-          <BaseInput v-model="formData.phone" label="Phone" name="number" inputType="number" validationRules="required" placeholder="phone" />
-      </div>
+        <div>
+          <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
       <div>
-          <label
+        <label
             for="age"
             class="
               block
@@ -36,37 +44,32 @@
             "
             >Relationship</label
           >
-          <select
-            id="age"
-            class="
-              mb-2
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-          >
-            <option selected>Choose your relationship</option>
-            <option value="fir">Family</option>
-            <option value="sec">Uncle/Aunt</option>
-            <option value="thir">Care taker</option>
-            <option value="fourth">other</option>
-          </select>
-        </div>
+        <select id="age"
+        class="
+          mb-2
+          bg-gray-50
+          border border-gray-300
+          text-gray-900 text-sm
+          rounded-lg
+          focus:ring-blue-500 focus:border-blue-500
+          block
+          w-full
+          p-2.5
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+        " v-model="selectedItem">
+          <option v-for="item in dropdownItems" :key="item.id" :value="item">{{ item }}</option>
+        </select>
+        <p>Selected item: {{ selectedItem }}</p>
+      </div>
       </div>
 
       <div>
-        <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <button type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             <LockClo
             sedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
@@ -85,25 +88,28 @@
           <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Parent</h2>
     </div>
-    <form @submit.prevent="submitForm" class="mt-8 space-y-6">
+    <form class="mt-8 space-y-6">
       <div class="-space-y-px rounded-md shadow-sm">
-        <div class="pb-2">
-          <BaseInput v-model="formData.firstName" label="First Name" name="fname" inputType="text" validationRules="required" placeholder="first name" />
+        <div>
+          <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2">
-          <BaseInput v-model="formData.lastName" label="Last Name" name="lname" inputType="text" validationRules="required" placeholder="last name" />
-         </div>
-        <div class="pb-2" >
-          <BaseInput v-model="formData.phone" label="Phone" name="number" inputType="number" validationRules="required" placeholder="phone" />
-      </div>
+        <div>
+          <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
+          <div class="mt-2">
+            <input  v-model="formData.phone" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
       <div>
-        <select v-model="selectedItem">
-          <option v-for="item in dropdownItems" :value="item">{{ item }}</option>
-        </select>
-        <p>Selected item: {{ selectedItem }}</p>
-      </div>
-      <div>
-          <label
+        <label
             for="age"
             class="
               block
@@ -115,37 +121,31 @@
             "
             >Relationship</label
           >
-          <select
-            id="age"
-            class="
-              mb-2
-              bg-gray-50
-              border border-gray-300
-              text-gray-900 text-sm
-              rounded-lg
-              focus:ring-blue-500 focus:border-blue-500
-              block
-              w-full
-              p-2.5
-              dark:bg-gray-700
-              dark:border-gray-600
-              dark:placeholder-gray-400
-              dark:text-white
-              dark:focus:ring-blue-500
-              dark:focus:border-blue-500
-            "
-          >
-            <option selected>Choose your relationship</option>
-            <option value="fir">Family</option>
-            <option value="sec">Uncle/Aunt</option>
-            <option value="thir">Care taker</option>
-            <option value="fourth">other</option>
-          </select>
-        </div>
+        <select id="age"
+        class="
+          mb-2
+          bg-gray-50
+          border border-gray-300
+          text-gray-900 text-sm
+          rounded-lg
+          focus:ring-blue-500 focus:border-blue-500
+          block
+          w-full
+          p-2.5
+          dark:bg-gray-700
+          dark:border-gray-600
+          dark:placeholder-gray-400
+          dark:text-white
+          dark:focus:ring-blue-500
+          dark:focus:border-blue-500
+        " v-model="selectedItem">
+          <option v-for="item in dropdownItems" :key="item.id" :value="item" >{{ item }}</option>
+        </select>
+        <p>Selected item: {{ selectedItem }}</p>
       </div>
-
+      </div>
       <div>
-        <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <button @click="submitForm" type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             <LockClo
             sedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
@@ -159,27 +159,38 @@
     </template>
     
     <script >
-    import BaseInput from '../../../components/BaseInput.vue';
-     import Socialmedia from '../../../components/Communication/Socialmedia.vue';
-// export default {
-//   data() {
-//     return {
-//       selectedItem: '',
-//       dropdownItems: ['Option 1', 'Option 2', 'Option 3'] // Replace with your actual dropdown items
-//     };
-//   }
-// };
+    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
      export default{
-     components:{BaseInput,Socialmedia},
-      data(){
-      return{
-       formData:{
-        firstName,
-        lastName,
-        phone,
-       }
-      }
-      }
+     components:{Socialmedia},
+     data() {
+  return {
+    formData: {
+      firstName: '',
+      lastName:'',
+      phone:'',
+
+    },
+    selectedItem: '',
+       dropdownItems: ['Family', 'Uncle/Aunt', 'Care taker','other'] // Replace with your actual dropdown items
+  };
+  
+},
+methods: {
+   async login() {
+      console.log("form data", this.formData);
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+        });
+    },
+  },
      }
     </script>
     

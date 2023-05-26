@@ -6,26 +6,25 @@
       <img class="mx-auto h-12 w-auto" src="/assets/logo.jpg" alt="Your Company">
       <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Ads Submission Form</h2>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true">
+    <form @submit.prevent="submitForm" class="mt-8 space-y-6" >
       <div class="-space-y-px rounded-md shadow-sm">
-        <div class="pb-2">
-          <BaseInput
-          type="text"
-          label="Company Name"
-          />
+       <div>
+          <label for="companyname" class="block text-sm font-medium leading-6 text-gray-900">Company Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.companyname" id="companyname" name="companyname" type="text" validationRules="required"  placeholder="company name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2">
-          <BaseInput
-          type="email"
-          label="Email"
-          />
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <input  v-model="formData.email" id="email" name="email" type="email" autocomplete="email" required=""  placeholder="abebe123@gmail.com" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
-        <div class="pb-2">
-         <BaseInput
-         type="number"
-         label="Phone"
-         />
+        <div>
+          <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
+          <div class="mt-2">
+            <input  v-model="formData.phone" id="phone" name="phone" type="number"  required="" placeholder="phone" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
         </div>
         <div >
           <label for="desc">Description</label>
@@ -40,15 +39,12 @@
         </div>
 
         <div class="text-sm">
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+          <router-link  :to="{name:'ForgotPassword'}" class="font-medium text-indigo-600 hover:text-indigo-500"> Forgot your password?</router-link>
         </div>
       </div>
 
       <div>
         <button type="submit" class="group relative flex w-full justify-center rounded-md bg-primary py-2 px-3 text-sm font-semibold text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-           
-          </span>
           Sign in
         </button>
       </div>
@@ -58,8 +54,23 @@
 </div>
 </template>
 
-<script setup>
-import BaseInput from '../../components/BaseInput.vue';
+<script>
 import Navbar from '../../components/Home/Navbar.vue';
-Navbar
+ export default{
+  components:{Navbar},
+  data(){
+    return{
+      formData:{
+        companyname:'',
+        email:'',
+        phone:'',
+      }
+    }
+  },
+  methods:{
+    submitForm(){
+      console.log('this is the details',this.formData)
+    }
+  }
+ }
 </script>

@@ -21,20 +21,20 @@
             Child Info
           </h2>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" value="true" />
+        <form @submit.prevent="childInfo" class="mt-8 space-y-6" >
           <div class="-space-y-px rounded-md shadow-sm">
-            <div class="pb-2">
-              <base-input 
-              type="text"
-              label="First Name"
-              />
+            <div>
+              <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+              <div class="mt-2">
+                <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
             </div>
-            <div class="pb-2">
-              <base-input 
-              type="text"
-              label="Last name"/>
-            </div>
+            <div>
+          <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+          <div class="mt-2">
+            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+        </div>
             <div>
               <label
                 for="age"
@@ -200,20 +200,19 @@
             Child Info
           </h2>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" value="true" />
+        <form class="mt-8 space-y-6" >
           <div class="-space-y-px rounded-md shadow-sm">
-            <div class="pb-2">
-              <base-input
-              label="First Name"
-              type="text"
-              />
+            <div>
+              <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+              <div class="mt-2">
+                <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
             </div>
-            <div class="pb-2">
-              <base-input
-              label="Last Name"
-              type="text"
-              />
+            <div>
+              <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
+              <div class="mt-2">
+                <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              </div>
             </div>
             <div>
               <label
@@ -364,8 +363,25 @@
       </div>
     </template>
     
-    <script setup>
-     import BaseInput from '../../../components/BaseInput.vue';
-     import Socialmedia from '../../../components/communication/Socialmedia.vue'
-    </script>
+    <script >
+     import Socialmedia from '../../../components/communication/Socialmedia.vue';
+     export default{
+      components:{Socialmedia},
+      data(){
+        return{
+        formData:{
+         firstName:'',
+         lastName:'',
+         age:'',
+         gender:'',
+        }
+        }
+      },
+    methods:{
+     childInfo(){
+      console.log('this form details',this.formData)
+     }
+    }
+     };
+</script>
    
