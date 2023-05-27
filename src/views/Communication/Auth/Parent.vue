@@ -11,7 +11,7 @@
     <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Parent</h2>
     </div>
-    <form @submit.prevent="submitForm" class="mt-8 space-y-6" >
+    <form @submit.prevent="login" class="mt-8 space-y-6" >
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
           <label for="fname" class=" block text-sm font-medium leading-6 text-gray-900">First Name</label>
@@ -88,7 +88,7 @@
           <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Parent</h2>
     </div>
-    <form class="mt-8 space-y-6">
+    <form  @submit.prevent="login" class="mt-8 space-y-6">
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
@@ -141,11 +141,11 @@
         " v-model="selectedItem">
           <option v-for="item in dropdownItems" :key="item.id" :value="item" >{{ item }}</option>
         </select>
-        <p>Selected item: {{ selectedItem }}</p>
+
       </div>
       </div>
       <div>
-        <button @click="submitForm" type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <button type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             <LockClo
             sedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
@@ -168,10 +168,9 @@
       firstName: '',
       lastName:'',
       phone:'',
-
     },
     selectedItem: '',
-       dropdownItems: ['Family', 'Uncle/Aunt', 'Care taker','other'] // Replace with your actual dropdown items
+    dropdownItems: ['Family', 'Uncle/Aunt', 'Care taker','other'] // Replace with your actual dropdown items
   };
   
 },

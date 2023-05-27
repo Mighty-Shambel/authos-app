@@ -11,8 +11,7 @@
     <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Health Professional</h2>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true" />
+    <form @submit.prevent="professionalInfo" class="mt-8 space-y-6" >
       <div class="-space-y-px rounded-md shadow-sm ">
         
         <div>
@@ -40,95 +39,88 @@
           </div>
         </div>
         <label>Gender</label>
-        <div class="flex">
-          <div class="flex items-center">
-            <input
-              id="female"
-              type="radio"
-              value=""
-              name="female"
-              class="
-                mt-2
-                w-4
-                h-4
-                text-blue-600
-                bg-gray-100
-                border-gray-300
-                focus:ring-blue-500
-                dark:focus:ring-blue-600 dark:ring-offset-gray-800
-                focus:ring-2
-                dark:bg-gray-700 dark:border-gray-600
-              "
-            />
-            <label
-              for="female"
-              class="
-                mt-2
-                ml-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-                mr-5
-              "
-              >Female</label
-            >
-            <input
-              id="male"
-              type="radio"
-              value=""
-              name="male"
-              class="
-                mt-2
-                w-4
-                h-4
-                text-blue-600
-                bg-gray-100
-                border-gray-300
-                focus:ring-blue-500
-                dark:focus:ring-blue-600 dark:ring-offset-gray-800
-                focus:ring-2
-                dark:bg-gray-700 dark:border-gray-600
-              "
-            />
-            <label
-              for="male"
-              class="
-                mt-2
-                ml-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Male</label
-            >
-          </div>
+        <div class="flex items-center">
+          <input
+            id="female"
+            type="radio"
+            value="female"
+            v-model="formData.selectedGender"
+            name="gender"
+            class="
+              mt-2
+              w-4
+              h-4
+              text-blue-600
+              bg-gray-100
+              border-gray-300
+              focus:ring-blue-500
+              dark:focus:ring-blue-600 dark:ring-offset-gray-800
+              focus:ring-2
+              dark:bg-gray-700 dark:border-gray-600
+            "
+          />
+          <label
+            for="female"
+            class="
+              mt-2
+              ml-2
+              text-sm
+              font-medium
+              text-gray-900
+              dark:text-gray-300
+              mr-5
+            "
+          >Female</label>
+          
+          <input
+            id="male"
+            type="radio"
+            value="male"
+            v-model="formData.selectedGender"
+            name="gender"
+            class="
+              mt-2
+              w-4
+              h-4
+              text-blue-600
+              bg-gray-100
+              border-gray-300
+              focus:ring-blue-500
+              dark:focus:ring-blue-600 dark:ring-offset-gray-800
+              focus:ring-2
+              dark:bg-gray-700 dark:border-gray-600
+            "
+          />
+          <label
+            for="male"
+            class="
+              mt-2
+              ml-2
+              text-sm
+              font-medium
+              text-gray-900
+              dark:text-gray-300
+            "
+          >Male</label>
         </div>
-
-      </div>
-
+        </div>
       <div>
-        <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-            <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-          </span>
+        <button @click="professionalInfo" type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Submit
         </button>
       </div>
     </form>
     </div>
     </div>
-        </div>
-      </div>
+    </div>
+    </div>
       <!-- Mobile view -->
       <div class="xl:hidden lg:block flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-20">
     <div class="w-full max-w-md space-y-8 shadow-md p-5">
       <div>
       <h2 class="mt-6 text-center text-2xl font-semibold tracking-tight text-gray-900">Health Professional</h2>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true" />
+    <form  @submit.prevent="professionalInfo"  class="mt-8 space-y-6" >
       <div class="-space-y-px rounded-md shadow-sm ">
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
@@ -155,79 +147,75 @@
           </div>
         </div>
         <label>Gender</label>
-        <div class="flex">
-          <div class="flex items-center">
-            <input
-              id="female"
-              type="radio"
-              value=""
-              name="female"
-              class="
-                mt-2
-                w-4
-                h-4
-                text-blue-600
-                bg-gray-100
-                border-gray-300
-                focus:ring-blue-500
-                dark:focus:ring-blue-600 dark:ring-offset-gray-800
-                focus:ring-2
-                dark:bg-gray-700 dark:border-gray-600
-              "
-            />
-            <label
-              for="female"
-              class="
-                mt-2
-                ml-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-                mr-5
-              "
-              >Female</label
-            >
-            <input
-              id="male"
-              type="radio"
-              value=""
-              name="male"
-              class="
-                mt-2
-                w-4
-                h-4
-                text-blue-600
-                bg-gray-100
-                border-gray-300
-                focus:ring-blue-500
-                dark:focus:ring-blue-600 dark:ring-offset-gray-800
-                focus:ring-2
-                dark:bg-gray-700 dark:border-gray-600
-              "
-            />
-            <label
-              for="male"
-              class="
-                mt-2
-                ml-2
-                text-sm
-                font-medium
-                text-gray-900
-                dark:text-gray-300
-              "
-              >Male</label
-            >
-          </div>
+        <div class="flex items-center">
+          <input
+            id="female"
+            type="radio"
+            value="female"
+            v-model="formData.selectedGender"
+            name="gender"
+            class="
+              mt-2
+              w-4
+              h-4
+              text-blue-600
+              bg-gray-100
+              border-gray-300
+              focus:ring-blue-500
+              dark:focus:ring-blue-600 dark:ring-offset-gray-800
+              focus:ring-2
+              dark:bg-gray-700 dark:border-gray-600
+            "
+          />
+          <label
+            for="female"
+            class="
+              mt-2
+              ml-2
+              text-sm
+              font-medium
+              text-gray-900
+              dark:text-gray-300
+              mr-5
+            "
+          >Female</label>
+          
+          <input
+            id="male"
+            type="radio"
+            value="male"
+            v-model="formData.selectedGender"
+            name="gender"
+            class="
+              mt-2
+              w-4
+              h-4
+              text-blue-600
+              bg-gray-100
+              border-gray-300
+              focus:ring-blue-500
+              dark:focus:ring-blue-600 dark:ring-offset-gray-800
+              focus:ring-2
+              dark:bg-gray-700 dark:border-gray-600
+            "
+          />
+          <label
+            for="male"
+            class="
+              mt-2
+              ml-2
+              text-sm
+              font-medium
+              text-gray-900
+              dark:text-gray-300
+            "
+          >Male</label>
         </div>
 
       </div>
 
       <div>
-        <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-            <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-          </span>
+        <button  @click="professionalInfo" type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Submit
         </button>
       </div>
@@ -236,8 +224,39 @@
   </div>
     </template>
     
-    <script setup>
+    <script>
+    import axios from 'axios'
      import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+     export default{
+      components:{Socialmedia},
+      data(){
+        return{
+          formData:{
+          firstName:'',
+          lastName:'',
+          email:'',
+          workplace:'',
+          selectedGender:''
+          }
+        }
+      },
+methods: {
+   async professionalInfo() {
+      console.log("form data", this.formData);
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+        });
+    },
+  },
+     }
     </script>
     
     <style>

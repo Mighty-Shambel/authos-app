@@ -11,8 +11,7 @@
     <div>
         <h2 class="mt-4 text-center text-2xl font-semibold tracking-tight text-gray-900">Organization</h2>
       </div>
-      <form class="mt-8 space-y-2" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <form  @submit.prevent="orgInfo" class="mt-8 space-y-2" >
         <div class="-space-y-px rounded-md shadow-sm ">
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
@@ -29,33 +28,50 @@
   
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
-          <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
+          <input type="number" id="year" v-model="formData.startyr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
         </div>
-        <div class="pb-2" >
-          <base-input 
-          type="text"
-          label="Bio"
-          />
-        </div>
-        <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">License</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+        <div>
+          <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
+          <div class="mt-2">
+            <textarea  v-model="formData.bio" id="bio" name="bio" type="text" validationRules="required"  placeholder="bio" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+          </div>
         </div>
         <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Profile pic</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="license_input">License</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            id="license_input"
+            type="file"
+            ref="licenseInput"
+            @change="handleFileChange('license',$event)"
+          >
         </div>
         <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Cover pic</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="profilepic_input">Profile pic</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            aria-describedby="profilepic_input_help"
+            id="profilepic_input"
+            type="file"
+            ref="profilePicInput"
+            @change="handleFileChange('profilePic',$event)"
+          >
+        </div>
+        <div class="pb-2">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="coverpic_input">Cover pic</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            aria-describedby="coverpic_input_help"
+            id="coverpic_input"
+            type="file"
+            ref="coverPicInput"
+            @change="handleFileChange('coverPic',$event)"
+          >
         </div>
         </div>
   
         <div>
-          <button type="submit" class=" group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-            </span>
+          <button @click="orgInfo" type="submit" class=" group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             Submit
           </button>
         </div>
@@ -72,7 +88,7 @@
       <div>
         <h2 class="mt-4 text-center text-2xl font-semibold tracking-tight text-gray-900">Organization</h2>
       </div>
-      <form class="mt-8 space-y-2">
+      <form @submit.prevent="orgInfo" class="mt-8 space-y-2">
         <div class="-space-y-px rounded-md shadow-sm ">
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
@@ -97,21 +113,42 @@
           </div>
         </div>
         <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">License</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="license_input">License</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            aria-describedby="license_input_help"
+            id="license_input"
+            type="file"
+            ref="licenseInput"
+            @change="handleFileChange('license',$event)"
+          >
         </div>
         <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Profile pic</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="profilepic_input">Profile pic</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            aria-describedby="profilepic_input_help"
+            id="profilepic_input"
+            type="file"
+            ref="profilePicInput"
+            @change="handleFileChange('profilePic',$event)"
+          >
         </div>
         <div class="pb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Cover pic</label>
-        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="coverpic_input">Cover pic</label>
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            aria-describedby="coverpic_input_help"
+            id="coverpic_input"
+            type="file"
+            ref="coverPicInput"
+            @change="handleFileChange('coverPic',$event)"
+          >
         </div>
         </div>
   
         <div>
-          <button type="submit" class=" group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <button @click="orgInfo" type="submit" class=" group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             Submit
           </button>
         </div>
@@ -119,8 +156,53 @@
     </div>
   </div>  
     </template>
-    
-    <script setup>
-    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+    <script>
+    import { ref } from 'vue';
+    import Socialmedia from '../../../components/communication/Socialmedia.vue';
+    export default {
+      components: {
+        Socialmedia,
+      },
+      data() {
+        return {
+          formData: {
+            orgname: '',
+            address: '',
+            startyr: '',
+            bio: '',
+            license: '',
+            profilePic:'',
+            coverPic: '',
+          },
+        };
+      },
+      methods: {
+        async orgInfo() {
+      console.log("form data", this.formData);
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+        });
+    },
+        handleFileChange(type, event) {
+          const file = event.target.files[0];
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = event =>{
+            this.previewImage=event.target.result;
+            this.formData = this.previewImage.split('/base64,',1);
+          }
+        
+        },
+      },
+    };
     </script>
- 
+    
+    

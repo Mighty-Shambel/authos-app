@@ -77,8 +77,19 @@
         }
       },
       methods:{
-      forgotPassword(){
+      async forgotPassword(){
         console.log('email',this.formData)
+        await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+        });
       }
       }
      }
