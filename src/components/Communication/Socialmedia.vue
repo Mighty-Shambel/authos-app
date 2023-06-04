@@ -11,6 +11,3 @@ its main purpose is to build a communication palform for parents,health professi
      </div>
      
 </template>
-
-<script setup>
-</script>

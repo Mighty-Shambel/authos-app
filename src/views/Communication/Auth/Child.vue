@@ -26,14 +26,20 @@
             <div>
               <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
               <div class="mt-2">
-                <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                <input  v-model="state.firstName" id="firstName" name="firstName" type="text" placeholder="first name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
+              <p v-if="v$.firstName.$error" class="text-red-600 text-sm py-1">
+                <span>{{ v$.firstName.$errors[0].$message }} </span>
+            </p>
             </div>
             <div>
           <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
           <div class="mt-2">
-            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.lastName" id="lastName" name="lastName" type="text"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.lastName.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.lastName.$errors[0].$message }} </span>
+        </p>
         </div>
             <div>
               <label
@@ -48,29 +54,13 @@
                 "
                 >Age</label
               >
-              <select
-                id="age"
-                class="
-                  mb-2
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                v-model="formData.selectedAge"
-              >
-              <option v-for="item in dropdownItems" :key="item.id" :value="item" >{{ item }}</option>
+              <select v-model="state.selectedItem" id="selectedItem" name="selectedItem" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
+                <option disabled value="">Select relation</option>
+                <option v-for="item in state.dropdownItems" :key="item" :value="item">{{ item }}</option>
               </select>
+              <p v-if="v$.selectedItem.$error" class="text-red-600 text-sm py-1">
+                <span>{{ v$.selectedItem.$errors[0].$message }}</span>
+              </p>
             </div>
 
             <label>Gender</label>
@@ -79,7 +69,7 @@
                 id="female"
                 type="radio"
                 value="female"
-                v-model="formData.selectedGender"
+                v-model="state.selectedGender"
                 name="gender"
                 class="
                   mt-2
@@ -111,7 +101,7 @@
                 id="male"
                 type="radio"
                 value="male"
-                v-model="formData.selectedGender"
+                v-model="state.selectedGender"
                 name="gender"
                 class="
                   mt-2
@@ -138,6 +128,9 @@
                 "
               >Male</label>
             </div>
+            <p v-if="v$.selectedGender.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.selectedGender.$errors[0].$message }}</span>
+            </p>
           </div>
 
           <div>
@@ -198,13 +191,16 @@
             <div>
               <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
               <div class="mt-2">
-                <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                <input  v-model="state.firstName" id="firstName" name="firstName" type="text"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
+              <p v-if="v$.firstName.$error" class="text-red-600 text-sm py-1">
+                <span>{{ v$.firstName.$errors[0].$message }}</span>
+              </p>
             </div>
             <div>
               <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
               <div class="mt-2">
-                <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                <input  v-model="state.lastName" id="lastName" name="lastName" type="text" placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div>
@@ -220,29 +216,13 @@
                 "
                 >Age</label
               >
-              <select
-                id="age"
-                class="
-                  mb-2
-                  bg-gray-50
-                  border border-gray-300
-                  text-gray-900 text-sm
-                  rounded-lg
-                  focus:ring-blue-500 focus:border-blue-500
-                  block
-                  w-full
-                  p-2.5
-                  dark:bg-gray-700
-                  dark:border-gray-600
-                  dark:placeholder-gray-400
-                  dark:text-white
-                  dark:focus:ring-blue-500
-                  dark:focus:border-blue-500
-                "
-                v-model="formData.selectedAge"
-              >
-              <option v-for="item in dropdownItems" :key="item.id" :value="item" >{{ item }}</option>
+              <select v-model="state.selectedAge" id="selectedAge" name="selectedAge" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
+                <option disabled value="">Select relation</option>
+                <option v-for="item in state.dropdownItems" :key="item" :value="item">{{ item }}</option>
               </select>
+              <p v-if="v$.selectedAge.$error" class="text-red-600 text-sm py-1">
+                <span>{{ v$.selectedAge.$errors[0].$message }}</span>
+              </p>
             </div>
 
             <label>Gender</label>
@@ -251,7 +231,7 @@
                 id="female"
                 type="radio"
                 value="female"
-                v-model="formData.selectedGender"
+                v-model="state.selectedGender"
                 name="gender"
                 class="
                   mt-2
@@ -283,7 +263,7 @@
                 id="male"
                 type="radio"
                 value="male"
-                v-model="formData.selectedGender"
+                v-model="state.selectedGender"
                 name="gender"
                 class="
                   mt-2
@@ -310,6 +290,9 @@
                 "
               >Male</label>
             </div>
+            <p v-if="v$.selectedGender.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.selectedGender.$errors[0].$message }}</span>
+            </p>
           </div>
 
           <div>
@@ -350,23 +333,36 @@
     <script>
     import axios from 'axios';
      import Socialmedia from '../../../components/communication/Socialmedia.vue';
+     import { required} from '@vuelidate/validators';
+     import {computed, reactive} from 'vue';
+     import useValidate from "@vuelidate/core";
      export default{
       components:{Socialmedia},
-      data(){
-        return{
-        formData:{
+      setup() {
+        const state = reactive({
          firstName:'',
          lastName:'',
-         age:'',
          selectedAge: '',
          selectedGender: '',
-        },
-        dropdownItems: ['0-14', '15-24', '25-48','above 48'] // Replace with your actual dropdown items
-        }
-      },
+         dropdownItems: ['0-14', '15-24', '25-48','above 48'] // Replace with your actual dropdown items
+        })
+        const rules = computed
+        (() => {
+            return {
+                firstName: {required},
+                lastName: {required},
+                selectedAge:{required},
+                selectedGender:{required},
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
+    },
     methods:{
       async childInfo(){
-      console.log('this form details',this.formData)
+        console.log("form data", this.v$);
+      this.v$.$validate()
+            if (!this.v$.$error) {  
       await axios
         .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
         .then((response) => {
@@ -378,6 +374,9 @@
         .catch((error) => {
           console.log("eroor", error);
         });
+      } else {
+                alert("Failed to submit")
+            }
      }
     }
      };

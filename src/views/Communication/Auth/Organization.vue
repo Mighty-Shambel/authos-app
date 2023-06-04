@@ -16,25 +16,37 @@
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
             <div class="mt-2">
-              <input  v-model="formData.orgname" id="orgname" name="orgname" type="text" validationRules="required"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"   placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
+            <p v-if="v$.orgname.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.orgname.$errors[0].$message }} </span>
+          </p>
           </div>
           <div>
             <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
             <div class="mt-2">
-              <input  v-model="formData.address" id="address" name="address" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input v-model="state.address" id="address" name="address" type="text"   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
+            <p v-if="v$.address.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.address.$errors[0].$message }} </span>
+          </p>
           </div>
   
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
-          <input type="number" id="year" v-model="formData.startyr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
+          <input type="number" id="year" v-model="state.startyr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
+          <p v-if="v$.startyr.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.startyr.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
           <div class="mt-2">
-            <textarea  v-model="formData.bio" id="bio" name="bio" type="text" validationRules="required"  placeholder="bio" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+            <textarea  v-model="state.bio" id="bio" name="bio" type="text" validationRules="required"  placeholder="bio" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
           </div>
+          <p v-if="v$.bio.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.bio.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="license_input">License</label>
@@ -45,6 +57,9 @@
             ref="licenseInput"
             @change="handleFileChange('license',$event)"
           >
+          <p v-if="v$.license.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.license.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="profilepic_input">Profile pic</label>
@@ -56,6 +71,9 @@
             ref="profilePicInput"
             @change="handleFileChange('profilePic',$event)"
           >
+          <p v-if="v$.profilePic.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.profilePic.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="coverpic_input">Cover pic</label>
@@ -67,6 +85,9 @@
             ref="coverPicInput"
             @change="handleFileChange('coverPic',$event)"
           >
+          <p v-if="v$.coverPic.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.coverPic.$errors[0].$message }} </span>
+        </p>
         </div>
         </div>
   
@@ -93,24 +114,36 @@
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
             <div class="mt-2">
-              <input  v-model="formData.orgname" id="orgname" name="orgname" type="text" validationRules="required"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
+            <p v-if="v$.orgname.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.orgname.$errors[0].$message }} </span>
+          </p>
           </div>
           <div>
             <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
             <div class="mt-2">
-              <input  v-model="formData.address" id="address" name="address" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.address" id="address" name="address" type="text"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
+            <p v-if="v$.address.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.address.$errors[0].$message }} </span>
+          </p>
           </div>
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
-          <input type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
+          <input v-model="state.startyr" type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year">
+          <p v-if="v$.startyr.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.startyr.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
           <div class="mt-2">
-            <textarea  v-model="formData.bio" id="bio" name="bio" type="text"  required="" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <textarea  v-model="state.bio" id="bio" name="bio" type="text"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.bio.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.bio.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="license_input">License</label>
@@ -122,6 +155,9 @@
             ref="licenseInput"
             @change="handleFileChange('license',$event)"
           >
+          <p v-if="v$.license.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.license.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="profilepic_input">Profile pic</label>
@@ -133,6 +169,9 @@
             ref="profilePicInput"
             @change="handleFileChange('profilePic',$event)"
           >
+          <p v-if="v$.profilePic.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.profilePic.$errors[0].$message }} </span>
+        </p>
         </div>
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="coverpic_input">Cover pic</label>
@@ -144,6 +183,9 @@
             ref="coverPicInput"
             @change="handleFileChange('coverPic',$event)"
           >
+          <p v-if="v$.coverPic.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.coverPic.$errors[0].$message }} </span>
+        </p>
         </div>
         </div>
   
@@ -157,15 +199,17 @@
   </div>  
     </template>
     <script>
+    import axios from 'axios'
+    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+    import { required } from '@vuelidate/validators';
+    import {computed, reactive} from 'vue';
+    import useValidate from "@vuelidate/core";
     import { ref } from 'vue';
-    import Socialmedia from '../../../components/communication/Socialmedia.vue';
     export default {
       components: {
         Socialmedia,
-      },
-      data() {
-        return {
-          formData: {
+        setup() {
+        const state = reactive({
             orgname: '',
             address: '',
             startyr: '',
@@ -173,14 +217,31 @@
             license: '',
             profilePic:'',
             coverPic: '',
-          },
-        };
+        })
+        const rules = computed
+        (() => {
+            return {
+            orgname: {required},
+            address: {required},
+            startyr:{required},
+            bio: {required},
+            license:{required},
+            profilePic:{required},
+            coverPic: {required},
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
+    },
       },
+      
       methods: {
         async orgInfo() {
-      console.log("form data", this.formData);
+      console.log("form data", this.state);
+      this.v$.$validate()
+            if (!this.v$.$error) {  
       await axios
-        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.state)
         .then((response) => {
           console.log(response.data.payload.token);
           localStorage.setItem("token", response.data.payload.token)
@@ -190,6 +251,9 @@
         .catch((error) => {
           console.log("eroor", error);
         });
+      } else {
+                alert("Failed to submit")
+            }
     },
         handleFileChange(type, event) {
           const file = event.target.files[0];
@@ -197,7 +261,7 @@
           reader.readAsDataURL(file);
           reader.onload = event =>{
             this.previewImage=event.target.result;
-            this.formData = this.previewImage.split('/base64,',1);
+            this.state = this.previewImage.split('/base64,',1);
           }
         
         },

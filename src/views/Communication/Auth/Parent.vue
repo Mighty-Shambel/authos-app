@@ -16,20 +16,29 @@
         <div>
           <label for="fname" class=" block text-sm font-medium leading-6 text-gray-900">First Name</label>
           <div class="mt-2">
-            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.firstName" id="firstName" name="firstName" type="text"  placeholder="first name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.firstName.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.firstName.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
           <div class="mt-2">
-            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.lastName" id="lastName" name="lastName" type="text"   placeholder="last name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.lastName.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.lastName.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
           <div class="mt-2">
-            <input  v-model="formData.lastName" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.phone" id="phone" name="phone" type="number"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.phone.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.phone.$errors[0].$message }} </span>
+        </p>
         </div>
       <div>
         <label
@@ -44,36 +53,18 @@
             "
             >Relationship</label
           >
-        <select id="age"
-        class="
-          mb-2
-          bg-gray-50
-          border border-gray-300
-          text-gray-900 text-sm
-          rounded-lg
-          focus:ring-blue-500 focus:border-blue-500
-          block
-          w-full
-          p-2.5
-          dark:bg-gray-700
-          dark:border-gray-600
-          dark:placeholder-gray-400
-          dark:text-white
-          dark:focus:ring-blue-500
-          dark:focus:border-blue-500
-        " v-model="selectedItem">
-          <option v-for="item in dropdownItems" :key="item.id" :value="item">{{ item }}</option>
-        </select>
-        <p>Selected item: {{ selectedItem }}</p>
+          <select v-model="state.selectedItem" id="selectedItem" name="selectedItem" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
+            <option disabled value="">Select relation</option>
+            <option v-for="item in state.dropdownItems" :key="item" :value="item">{{ item }}</option>
+          </select>
+          <p v-if="v$.selectedItem.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.selectedItem.$errors[0].$message }}</span>
+          </p>
       </div>
       </div>
 
       <div>
-        <button type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-            <LockClo
-            sedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-          </span>
+        <button @click="login" type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Submit
         </button>
       </div>
@@ -93,20 +84,29 @@
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
           <div class="mt-2">
-            <input  v-model="formData.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.firstName.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.firstName.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
           <div class="mt-2">
-            <input  v-model="formData.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.lastName.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.lastName.$errors[0].$message }} </span>
+        </p>
         </div>
         <div>
           <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
           <div class="mt-2">
-            <input  v-model="formData.phone" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="phone" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
+          <p v-if="v$.phone.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.phone.$errors[0].$message }} </span>
+        </p>
         </div>
       <div>
         <label
@@ -121,35 +121,17 @@
             "
             >Relationship</label
           >
-        <select id="age"
-        class="
-          mb-2
-          bg-gray-50
-          border border-gray-300
-          text-gray-900 text-sm
-          rounded-lg
-          focus:ring-blue-500 focus:border-blue-500
-          block
-          w-full
-          p-2.5
-          dark:bg-gray-700
-          dark:border-gray-600
-          dark:placeholder-gray-400
-          dark:text-white
-          dark:focus:ring-blue-500
-          dark:focus:border-blue-500
-        " v-model="selectedItem">
-          <option v-for="item in dropdownItems" :key="item.id" :value="item" >{{ item }}</option>
-        </select>
-
+          <select v-model="state.selectedItem" id="selectedItem" name="selectedItem" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
+            <option disabled value="">Select relation</option>
+            <option v-for="item in state.dropdownItems" :key="item" :value="item">{{ item }}</option>
+          </select>
+          <p v-if="v$.selectedItem.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.selectedItem.$errors[0].$message }}</span>
+          </p>
       </div>
       </div>
       <div>
-        <button type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-            <LockClo
-            sedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-          </span>
+        <button @click="login" type="button" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Submit
         </button>
       </div>
@@ -159,24 +141,39 @@
     </template>
     
     <script >
-    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+  import axios from 'axios'
+import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+import { required,minLength } from '@vuelidate/validators';
+import {computed, reactive} from 'vue';
+import useValidate from "@vuelidate/core";
      export default{
      components:{Socialmedia},
-     data() {
-  return {
-    formData: {
-      firstName: '',
-      lastName:'',
-      phone:'',
+     
+  setup() {
+        const state = reactive({
+          firstName: '',
+          lastName:'',
+          phone:'',
+          selectedItem: '',
+          dropdownItems: ['Family', 'Uncle/Aunt', 'Care taker','other'] // Replace with your actual dropdown items
+        })
+        const rules = computed
+        (() => {
+            return {
+                firstName: {required},
+                lastName: {required},
+                selectedItem: { required },
+                phone: {required, minLength: minLength(10)}
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
     },
-    selectedItem: '',
-    dropdownItems: ['Family', 'Uncle/Aunt', 'Care taker','other'] // Replace with your actual dropdown items
-  };
-  
-},
 methods: {
    async login() {
-      console.log("form data", this.formData);
+    console.log("form data", this.v$);
+      this.v$.$validate()
+            if (!this.v$.$error) { 
       await axios
         .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
         .then((response) => {
@@ -188,11 +185,10 @@ methods: {
         .catch((error) => {
           console.log("eroor", error);
         });
+      } else {
+                alert("Failed to submit")
+            }
     },
   },
      }
     </script>
-    
-    <style>
-    
-    </style>

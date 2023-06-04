@@ -6,9 +6,10 @@ export default defineConfig({
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
   },
-  server:{
-    watch:{
-      usePolling:true
+  server: {
+    hmr: {
+      overlay: true,
+      extensions: ['js', 'css', 'vue'] // Add 'vue' if not already present
     }
   },
   plugins: [vue()],

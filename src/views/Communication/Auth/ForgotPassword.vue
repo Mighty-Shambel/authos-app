@@ -15,15 +15,16 @@
               <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                 <div class="mt-2">
-                  <input v-model="formData.email" placeholder="email" id="email" name="email" type="email" autocomplete="email" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input v-model="state.email" placeholder="email" id="email" name="email" type="email" autocomplete="email" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
+                <p v-if="v$.email.$error" class="text-red-600 text-sm py-1">
+                  <span>{{ v$.email.$errors[0].$message }} </span>
+              </p>
               </div>
             </div>
             <div>
-              <button type="submit" class="mb-20 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                  <LockClosedIcon class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-                </span>
+              <button @click="forgotPassword" type="submit" class="mb-20 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                
                 Submit
               </button>
               <!-- <span class="text-slate-400">Don't have account? <router-link :to="{name:'createaccount'}" class="text-primary text-semibold"> Sign up</router-link> </span> -->
@@ -44,8 +45,11 @@
               <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                 <div class="mt-2">
-                  <input v-model="formData.email" placeholder="email" id="email" name="email" type="email" autocomplete="email" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input v-model="state.email" placeholder="email" id="email" name="email" type="email" autocomplete="email" required="" class=" p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
+                <p v-if="v$.email.$error" class="text-red-600 text-sm py-1">
+                  <span>{{ v$.email.$errors[0].$message }} </span>
+              </p>
               </div>
             </div>
             <div class="flex items-center justify-between"> 
@@ -55,7 +59,7 @@
             </div>
     
             <div>
-              <button type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <button  @click="forgotPassword" type="submit" class=" mb-5 group relative flex w-full justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white hover:bg-blue focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 Submit
               </button>
               <!-- <span class="text-slate-400">Don't have account? <router-link :to="{name:'createaccount'}" class="text-primary text-semibold"> Sign up</router-link> </span> -->
@@ -66,19 +70,32 @@
     </template>
 
     <script >
+    import axios from 'axios'
    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
-     components:{Socialmedia};
+   import { required,email } from '@vuelidate/validators';
+    import {computed, reactive} from 'vue';
+    import useValidate from "@vuelidate/core";
      export default{
-      data(){
-        return{
-        formData:{
-          email:''
-        }
-        }
-      },
+      components:{Socialmedia},
+      setup() {
+        const state = reactive({
+            email: "",
+        })
+        const rules = computed
+        (() => {
+            return {
+                email: {required, email},
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
+    },
+      
       methods:{
       async forgotPassword(){
-        console.log('email',this.formData)
+        console.log("form data", this.state);
+      this.v$.$validate()
+            if (!this.v$.$error) { 
         await axios
         .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
         .then((response) => {
@@ -90,6 +107,9 @@
         .catch((error) => {
           console.log("eroor", error);
         });
+      } else {
+                alert("Failed to submit")
+            }
       }
       }
      }
