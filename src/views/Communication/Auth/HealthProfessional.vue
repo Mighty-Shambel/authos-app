@@ -257,8 +257,8 @@
     </template>
     
     <script>
-    import axios from 'axios'
-     import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+    import axios from 'axios';
+    import Socialmedia from '../../../components/communication/Socialmedia.vue';
      import { required, email  } from '@vuelidate/validators';
      import {computed, reactive} from 'vue';
      import useValidate from "@vuelidate/core";
@@ -287,7 +287,7 @@
     },
 methods: {
    async professionalInfo() {
-    console.log("form data", this.v$);
+    console.log("form data", this.state);
       this.v$.$validate()
             if (!this.v$.$error) {  
       await axios

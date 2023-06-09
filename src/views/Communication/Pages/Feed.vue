@@ -230,16 +230,14 @@ import axios from 'axios';
       data(){
     return{
       postModal:false,
-      mydata:''
+      posts:'',
     }
       },
       methods:{
        
       },
      
-      created(){
-    
-
+      mounted(){
      try{
       console.log('mightyyyyyyyyyyyyyyyyyyyyyyyyyyy')
     axios

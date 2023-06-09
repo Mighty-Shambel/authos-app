@@ -5,10 +5,7 @@
          <socialmedia></socialmedia>
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-10 lg:pt-24 lg:pl-20 md:pt-10 bg-white  ">
         <div class="w-full max-w-md space-y-8">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.25 4 5.75 6">
-      <path d="M 2 4 C 1 4 1 5 2 5 C 1 5 1 6 2 6 C 1 6 1 7 2 7 C 1 7 1 8 2 8 C 1 8 1 9 2 9 C 1 9 1 10 2 10 M 7 5" fill=""/>
-    </svg> -->
-    <div>
+        <div>
           <h2
             class="
               mt-6
@@ -216,12 +213,12 @@
                 "
                 >Age</label
               >
-              <select v-model="state.selectedAge" id="selectedAge" name="selectedAge" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
+              <select v-model="state.selectedItem" id="selectedItem" name="selectedItem" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" validationRules="required">
                 <option disabled value="">Select relation</option>
                 <option v-for="item in state.dropdownItems" :key="item" :value="item">{{ item }}</option>
               </select>
-              <p v-if="v$.selectedAge.$error" class="text-red-600 text-sm py-1">
-                <span>{{ v$.selectedAge.$errors[0].$message }}</span>
+              <p v-if="v$.selectedItem.$error" class="text-red-600 text-sm py-1">
+                <span>{{ v$.selectedItem.$errors[0].$message }}</span>
               </p>
             </div>
 
@@ -331,18 +328,18 @@
     </template>
     
     <script>
-    import axios from 'axios';
-     import Socialmedia from '../../../components/communication/Socialmedia.vue';
-     import { required} from '@vuelidate/validators';
-     import {computed, reactive} from 'vue';
-     import useValidate from "@vuelidate/core";
+import axios from 'axios'
+import Socialmedia from '../../../components/communication/Socialmedia.vue';
+import { required } from '@vuelidate/validators';
+import {computed, reactive} from 'vue';
+import useValidate from "@vuelidate/core";
      export default{
       components:{Socialmedia},
       setup() {
         const state = reactive({
          firstName:'',
          lastName:'',
-         selectedAge: '',
+         selectedItem: '',
          selectedGender: '',
          dropdownItems: ['0-14', '15-24', '25-48','above 48'] // Replace with your actual dropdown items
         })
@@ -351,7 +348,7 @@
             return {
                 firstName: {required},
                 lastName: {required},
-                selectedAge:{required},
+                selectedItem:{required},
                 selectedGender:{required},
             }
         });
@@ -360,11 +357,11 @@
     },
     methods:{
       async childInfo(){
-        console.log("form data", this.v$);
+        console.log("form data", this.state);
       this.v$.$validate()
             if (!this.v$.$error) {  
       await axios
-        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.formData)
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.state)
         .then((response) => {
           console.log(response.data.payload.token);
           localStorage.setItem("token", response.data.payload.token)

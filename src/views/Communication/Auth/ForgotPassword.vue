@@ -71,8 +71,8 @@
 
     <script >
     import axios from 'axios'
-   import Socialmedia from '../../../components/Communication/Socialmedia.vue';
-   import { required,email } from '@vuelidate/validators';
+    import Socialmedia from '../../../components/communication/Socialmedia.vue';
+    import { required,email } from '@vuelidate/validators';
     import {computed, reactive} from 'vue';
     import useValidate from "@vuelidate/core";
      export default{

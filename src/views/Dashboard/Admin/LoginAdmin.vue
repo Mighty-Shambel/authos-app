@@ -18,18 +18,24 @@
             <input
               id="email"
               type="email"
-              v-model="formData.email"
+              v-model="state.email"
               class="border border-black mb-4 rounded-md p-1"
               placeholder="email"
             />
+            <p v-if="v$.email.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.email.$errors[0].$message }} </span>
+          </p>
             <label class="mb-1">Password</label>
             <input
               id="password"
               type="password"
-              v-model="formData.password"
+              v-model="state.password"
               placeholder="password"
               class="border border-black rounded-md p-1"
             />
+            <p v-if="v$.password.$error" class="text-red-600 text-sm py-1">
+              <span>{{ v$.password.$errors[0].$message }} </span>
+          </p>
           </div>
         </form>
   
@@ -39,36 +45,52 @@
   </template>
   
   <script>
-  import axios from "axios";
-  export default {
-    data() {
-      return {
-        formData: {
-          email: "",
-          password: "",
-          user_type: "Parent",
-        },
-      };
+ 
+import axios from 'axios'
+import { required, email ,minLength } from '@vuelidate/validators';
+import {computed, reactive} from 'vue';
+import useValidate from "@vuelidate/core";
+export default {
+  setup() {
+        const state = reactive({
+            email: "",
+            password: "",
+        })
+        const rules = computed
+        (() => {
+            return {
+                email: {required, email},
+                password: {required, minLength: minLength(8)}
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
     },
-    methods: {
-      async login() {
-        console.log("form data", this.formData);
-        axios
-          .post(`http://192.168.8.101:3000/api/v1/auth/signin`, this.formData)
-          .then((response) => {
-            console.log(response.data.payload.token);
-            localStorage.setItem("token", response.data.payload.token)
-            this.$router.push('/systemupdate');
-          })
-          .catch((error) => {
-            console.log("eroor", error);
-            console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
-          });
-        //console.warn(result)
-      },
+  methods: {
+   async login() {
+    
+      console.log("form data", this.state);
+      this.v$.$validate()
+            if (!this.v$.$error) {        
+      await axios
+        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.state)
+        .then((response) => {
+          console.log(response.data.payload.token);
+          localStorage.setItem("token", response.data.payload.token)
+          console.log(response.data)
+          this.$router.push('/feed');
+        })
+        .catch((error) => {
+          console.log("eroor", error);
+          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
+        });
+      // console.warn(result)
+            } else {
+                alert("Failed to submit")
+            }
     },
-  
-  };
+  },
+};
   </script>
   
   <style>

@@ -4,18 +4,22 @@
       <div>
         <h2 class=" flex justify-start mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create </h2>
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
+      <form @submit.prevent="createSystem" class="mt-8 space-y-6">
         <div class="-space-y-px rounded-md shadow-sm">
-          
             <div class="pb-2" >
             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
-            <input v-model="formData.title" type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="title" required>
+            <input v-model="state.title" type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="title" >
           </div>
+          <p v-if="v$.title.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.title.$errors[0].$message }} </span>
+        </p>
           <div class="pb-2 mb-3" >
             <label for="desc" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 ">Description</label>
-            <textarea v-model="formData.description" id="desc" rows="4"  class="w-full bg-gray-50 p-2.5 text-sm rounded-lg  border border-gray-300" placeholder="Description..."></textarea>
+            <textarea v-model="state.description" id="desc" rows="4"  class="w-full bg-gray-50 p-2.5 text-sm rounded-lg  border border-gray-300" placeholder="Description..."></textarea>
           </div>
+          <p v-if="v$.description.$error" class="text-red-600 text-sm py-1">
+            <span>{{ v$.description.$errors[0].$message }} </span>
+        </p>
           <div class="pb-2">
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Cover Image</label>
         <input @change="getImage" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
@@ -33,23 +37,31 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
+import { required} from '@vuelidate/validators';
+import {computed, reactive} from 'vue';
+import useValidate from "@vuelidate/core";
 export default {
-  data() {
-    return {
-      formData: {
-        title: "",
-        description: "",
-        image: "",
-      },
-    };
-  },
- 
+  setup() {
+        const state = reactive({
+            title: "",
+            description: "",
+        })
+        const rules = computed
+        (() => {
+            return {
+                title: {required},
+                description: {required}
+            }
+        });
+        const v$ = useValidate(rules, state);
+        return {state, v$}
+    },
   methods: {
     async createSystem() {
-      console.log("form data", this.formData);
+      console.log("form data", this.state);
       axios
-        .post(`http://192.168.8.101:7000/api/v1/auth/signin`, this.formData, {
+        .post(`http://192.168.8.101:7000/api/v1/auth/signin`, this.state, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -61,7 +73,6 @@ export default {
         })
         .catch((error) => {
           console.log("eroor", error);
-          console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
         });
       //console.warn(result)
     },
@@ -77,9 +88,4 @@ export default {
     }
   },
 };
-
 </script>
-
-<style>
-
-</style>

@@ -162,7 +162,7 @@
 <script>
 import axios from "axios";
 import { useRoute, useRouter } from 'vue-router';
-import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+import Socialmedia from "../../../components/communication/Socialmedia.vue";
 import { required, email ,minLength } from '@vuelidate/validators';
 import {computed, reactive} from 'vue';
 import useValidate from "@vuelidate/core";
@@ -200,7 +200,7 @@ export default {
       }
     },
     async submitForm() {
-      console.log("form data", this.v$);
+      console.log("form data", this.state);
       this.v$.$validate()
             if (!this.v$.$error) {
       try {

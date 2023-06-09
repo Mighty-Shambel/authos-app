@@ -16,7 +16,7 @@
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
             <div class="mt-2">
-              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"   placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"   placeholder="Organization name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
             <p v-if="v$.orgname.$error" class="text-red-600 text-sm py-1">
               <span>{{ v$.orgname.$errors[0].$message }} </span>
@@ -25,7 +25,7 @@
           <div>
             <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
             <div class="mt-2">
-              <input v-model="state.address" id="address" name="address" type="text"   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input v-model="state.address" id="address" name="address" type="text"   class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
             <p v-if="v$.address.$error" class="text-red-600 text-sm py-1">
               <span>{{ v$.address.$errors[0].$message }} </span>
@@ -34,7 +34,7 @@
   
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
-          <input type="number" id="year" v-model="state.startyr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
+          <input type="number" id="year" v-model="state.startyr" class=" px-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year" required>
           <p v-if="v$.startyr.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.startyr.$errors[0].$message }} </span>
         </p>
@@ -42,7 +42,7 @@
         <div>
           <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
           <div class="mt-2">
-            <textarea  v-model="state.bio" id="bio" name="bio" type="text" validationRules="required"  placeholder="bio" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+            <textarea  v-model="state.bio" id="bio" name="bio" type="text" validationRules="required"  placeholder="bio" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
           </div>
           <p v-if="v$.bio.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.bio.$errors[0].$message }} </span>
@@ -51,7 +51,7 @@
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="license_input">License</label>
           <input
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            class="px-3 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
             id="license_input"
             type="file"
             ref="licenseInput"
@@ -64,7 +64,7 @@
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="profilepic_input">Profile pic</label>
           <input
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            class=" px-3 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
             aria-describedby="profilepic_input_help"
             id="profilepic_input"
             type="file"
@@ -78,7 +78,7 @@
         <div class="pb-2">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="coverpic_input">Cover pic</label>
           <input
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            class="px-3 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
             aria-describedby="coverpic_input_help"
             id="coverpic_input"
             type="file"
@@ -114,7 +114,7 @@
           <div>
             <label for="orgname" class="block text-sm font-medium leading-6 text-gray-900">Organization Name</label>
             <div class="mt-2">
-              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"  placeholder="Organization name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.orgname" id="orgname" name="orgname" type="text"  placeholder="Organization name" class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
             <p v-if="v$.orgname.$error" class="text-red-600 text-sm py-1">
               <span>{{ v$.orgname.$errors[0].$message }} </span>
@@ -123,7 +123,7 @@
           <div>
             <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
             <div class="mt-2">
-              <input  v-model="state.address" id="address" name="address" type="text"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+              <input  v-model="state.address" id="address" name="address" type="text"  class=" px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
             <p v-if="v$.address.$error" class="text-red-600 text-sm py-1">
               <span>{{ v$.address.$errors[0].$message }} </span>
@@ -131,7 +131,7 @@
           </div>
           <div class="pb-2" >
           <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Starting year</label>
-          <input v-model="state.startyr" type="number" id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year">
+          <input v-model="state.startyr" type="number" id="year" class="px-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="starting year">
           <p v-if="v$.startyr.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.startyr.$errors[0].$message }} </span>
         </p>
@@ -139,7 +139,7 @@
         <div>
           <label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Biography</label>
           <div class="mt-2">
-            <textarea  v-model="state.bio" id="bio" name="bio" type="text"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <textarea  v-model="state.bio" id="bio" name="bio" type="text"  class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <p v-if="v$.bio.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.bio.$errors[0].$message }} </span>
@@ -200,14 +200,13 @@
     </template>
     <script>
     import axios from 'axios'
-    import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+    import Socialmedia from '../../../components/communication/Socialmedia.vue';
     import { required } from '@vuelidate/validators';
     import {computed, reactive} from 'vue';
     import useValidate from "@vuelidate/core";
     import { ref } from 'vue';
     export default {
-      components: {
-        Socialmedia,
+      components: {Socialmedia},
         setup() {
         const state = reactive({
             orgname: '',
@@ -233,7 +232,7 @@
         const v$ = useValidate(rules, state);
         return {state, v$}
     },
-      },
+  
       
       methods: {
         async orgInfo() {
@@ -254,19 +253,10 @@
       } else {
                 alert("Failed to submit")
             }
-    },
-        handleFileChange(type, event) {
-          const file = event.target.files[0];
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = event =>{
-            this.previewImage=event.target.result;
-            this.state = this.previewImage.split('/base64,',1);
-          }
+    }
+        }
+      };
         
-        },
-      },
-    };
     </script>
     
     

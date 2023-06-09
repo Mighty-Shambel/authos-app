@@ -42,7 +42,7 @@
         </div>
       <div>
         <label
-            for="age"
+            for="reltionship"
             class="
               block
               text-sm
@@ -84,7 +84,7 @@
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
           <div class="mt-2">
-            <input  v-model="firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.firstName" id="firstName" name="firstName" type="text" validationRules="required"  placeholder="first name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <p v-if="v$.firstName.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.firstName.$errors[0].$message }} </span>
@@ -93,7 +93,7 @@
         <div>
           <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
           <div class="mt-2">
-            <input  v-model="lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.lastName" id="lastName" name="lastName" type="text" validationRules="required"  placeholder="last name" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <p v-if="v$.lastName.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.lastName.$errors[0].$message }} </span>
@@ -102,7 +102,7 @@
         <div>
           <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
           <div class="mt-2">
-            <input  v-model="phone" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            <input  v-model="state.phone" id="phone" name="phone" type="number" validationRules="required"  placeholder="phone" class="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
           </div>
           <p v-if="v$.phone.$error" class="text-red-600 text-sm py-1">
             <span>{{ v$.phone.$errors[0].$message }} </span>
@@ -110,7 +110,7 @@
         </div>
       <div>
         <label
-            for="age"
+            for="relationship"
             class="
               block
               text-sm
@@ -142,7 +142,7 @@
     
     <script >
   import axios from 'axios'
-import Socialmedia from '../../../components/Communication/Socialmedia.vue';
+import Socialmedia from '../../../components/communication/Socialmedia.vue';
 import { required,minLength } from '@vuelidate/validators';
 import {computed, reactive} from 'vue';
 import useValidate from "@vuelidate/core";
@@ -171,7 +171,7 @@ import useValidate from "@vuelidate/core";
     },
 methods: {
    async login() {
-    console.log("form data", this.v$);
+    console.log("form data", this.state);
       this.v$.$validate()
             if (!this.v$.$error) { 
       await axios
