@@ -22,7 +22,7 @@ import Notification from "../views/Communication/pages/Notification.vue"
 import Profile  from "../views/Communication/Pages/Profile.vue"
 import Friends from  "../views/Communication/Pages/Friends.vue"
 import ChatList from "../views/Communication/Pages/ChatList.vue"
-
+import OtpVerification from '../views/communication/auth/OtpVerification.vue'
 //Awareness pages
 import AwarenessBlog from "../views/Awareness/AwarenessBlog.vue";
 import AwarenessView from '../views/awareness/AwarenessView'
@@ -161,6 +161,11 @@ const router = createRouter({
       path: "/forgotpassword",
       name: "ForgotPassword",
       component: ForgotPassword,
+    },
+    {
+      path: "/otpverification",
+      name: "OtpVerification",
+      component: OtpVerification,
     },
     {
       path: "/",

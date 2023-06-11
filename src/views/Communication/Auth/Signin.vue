@@ -136,7 +136,6 @@ export default {
     },
   methods: {
    async login() {
-    
       console.log("form data", this.state);
       this.v$.$validate()
             if (!this.v$.$error) {        

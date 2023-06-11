@@ -237,18 +237,18 @@ import axios from 'axios';
        
       },
      
-      mounted(){
+      created(){
      try{
       console.log('mightyyyyyyyyyyyyyyyyyyyyyyyyyyy')
     axios
-        .get(`http://192.168.8.187:3000/api/v1/post/readAllPosts`)
+        .get(`https://jsonplaceholder.typicode.com/posts`)
         .then((response) => {
-          this.mydata=  response.data.postRead
-          console.log(this.mydata)
+          // this.posts=  response.data.postRead
+          // console.log(this.mydata)
+          console.log( response.data)
         })
         .catch((error) => {
           console.log("eroor", error);
-          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
         });s
      }catch(e){
 
