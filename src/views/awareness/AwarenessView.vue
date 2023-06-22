@@ -49,6 +49,7 @@
 import { useRoute, useRouter } from 'vue-router';
 import { ref, onBeforeMount, computed, watch } from 'vue';
 import Data from '../../data.json';
+import { useStore } from 'vuex';
 
 export default {
   setup() {
@@ -56,6 +57,7 @@ export default {
     const router = useRouter();
     const data = ref(null);
     const { id } = route.params;
+    const store = useStore();
 
     onBeforeMount(() => {
       const item = Data.find((c) => c.id === parseInt(id));

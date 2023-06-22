@@ -67,28 +67,43 @@ export default {
         return {state, v$}
     },
   methods: {
-   async login() {
-    
-      console.log("form data", this.state);
-      this.v$.$validate()
-            if (!this.v$.$error) {        
-      await axios
-        .post(`http://192.168.8.187:3000/api/v1/auth/signin`, this.state)
-        .then((response) => {
-          console.log(response.data.payload.token);
-          localStorage.setItem("token", response.data.payload.token)
-          console.log(response.data)
-          this.$router.push('/feed');
-        })
-        .catch((error) => {
-          console.log("eroor", error);
-          // console.log("errrrrrrrrrrrrrrrrrrrr", error.response.data.message);
-        });
-      // console.warn(result)
-            } else {
-                alert("Failed to submit")
-            }
-    },
+    async login() {
+  console.log("form data", this.state);
+  this.v$.$validate();
+  if (!this.v$.$error) {
+    try {
+      const response = await axios.post(`http://192.168.8.159:3000/api/v1/auth/signin`, 
+      {
+        email:this.state.email,
+        password:this.state.password,
+      });
+      console.log(response.data.payload.token);
+      localStorage.setItem("token", response.data.payload.token);
+      console.log(response.data);
+      this.$router.push('/systemupdate');
+    } catch (error) {
+      console.log("error", error);
+      if (error.response) {
+        console.log("Status code:", error.response.status);
+        console.log("Error message:", error.response.data.message);
+        // Handle the error based on the status code
+        // For example, you can display an appropriate error message or redirect to a specific route
+        if (error.response.status === 401) {
+          alert("Unauthorized: Please check your credentials");
+        } else if (error.response.status === 404) {
+          alert("Endpoint not found");
+        } else {
+          alert("An error occurred");
+        }
+      } else {
+        console.log("Network error:", error.message);
+        alert("Network error occurred");
+      }
+    }
+  } else {
+    alert("Failed to submit");
+  }
+}
   },
 };
   </script>

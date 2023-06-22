@@ -231,6 +231,7 @@ import axios from 'axios';
     return{
       postModal:false,
       posts:'',
+      errorMsg:'',
     }
       },
       methods:{
@@ -243,15 +244,16 @@ import axios from 'axios';
     axios
         .get(`https://jsonplaceholder.typicode.com/posts`)
         .then((response) => {
-          // this.posts=  response.data.postRead
-          // console.log(this.mydata)
-          console.log( response.data)
+          this.posts=  response.data.postRead
+          console.log(this.mydata)
+          
         })
         .catch((error) => {
           console.log("eroor", error);
-        });s
-     }catch(e){
-
+          this.errorMsg="Eroor When Retrieving"
+        });
+     }catch(error){
+      console.log('error',error);
      }
 
 }

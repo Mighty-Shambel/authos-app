@@ -58,13 +58,15 @@
       "detail":[
         {
           "name": "Doctor Gebeyehu",
-          "worksAt": "Nehemia in Addis Ababa",
+          "gender":"female",
+          "works_place": "Nehemia in Addis Ababa",
           "experience": "6 years",
           "contact": "099987665"
         },
         {
           "name": "Doctor Almayehu Sisay",
-          "worksAt": "Joy in Addis Ababa",
+          "gender":"female",
+          "works_place": "Joy in Addis Ababa",
           "experience": "2 years",
           "contact": "099987665"
         }

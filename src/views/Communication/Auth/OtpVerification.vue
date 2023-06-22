@@ -95,11 +95,12 @@ export default {
     });
 
     const v$ = useValidate(rules, state);
-
-    return { state, v$ };
+    const router = useRouter();
+    return { state, v$ ,router};
   },
   methods: {
-    async submitForm() {
+    async submitForm(router) {
+  console.log("form data", this.state.otp);
   console.log("form data", this.state);
   this.v$.$validate();
 
@@ -107,34 +108,55 @@ export default {
     try {
       const user = JSON.parse(localStorage.getItem("user")); // Retrieve the user object from localStorage
 
-if (user && user.id) {
-  // User object exists in localStorage and has an "id" property
-  // Proceed with your logic here
-  console.log("User object exists in localStorage:", user);
-} else {
-  // User object is not stored in localStorage or does not have an "id" property
-  console.log("User object not found in localStorage");
-  // Handle the case when the user object is not found
-}
-      const response = await axios.post(
-        `http://192.168.8.187:3000/api/v1/auth/verifyEmail`,
-        {
-          otp: this.state.otp,
-          id: user.id // Use the user ID obtained from localStorage
-        }
-      );
-      console.log(response.data.payload.token);
-      console.log(response.data);
+      if (user && user.id) {
+        const token = localStorage.getItem("token"); // Retrieve the authentication token from localStorage
 
-      const router = useRouter();
-      router.push('/feed');
+        const config = {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        };
+
+        const response = await axios.post(
+          `http://192.168.8.118:3000/api/v1/auth/verifyEmail?id=${user.id}`,
+          {
+            otp: this.state.otp,
+            id: user.id // Use the user ID obtained from localStorage
+          },
+          config
+        );
+         localStorage.setItem("token", response.data.payload.token);
+      
+          const userType = response.data.payload.userAcc.user_type;
+          console.log('user_type',userType);
+          if (userType === 'Parent') {
+            this.$router.push({ path: '/parent' })
+          } else if (userType === 'Health_professional') {
+            this.$router.push({ path: '/healthprofessional' })
+          } else if (userType === 'Organization') {
+            this.$router.push({ path: '/organization' })
+           
+          } else {
+            // Handle the case where the user type is not recognized or redirect to a default page
+            this.$router.push({ path: '/notfound' })
+           
+          }
+        } else {
+          console.log("Invalid response data format");
+          // Handle the case when the response data is not in the expected format
+        }
+      
     } catch (error) {
       console.log("error", error);
+      if (error.response && error.response.status === 401) {
+        console.log("Unauthorized access. Please check the token or login again.");
+      }
     }
   } else {
     alert("Failed to submit");
   }
 }
+
 
   }
 };

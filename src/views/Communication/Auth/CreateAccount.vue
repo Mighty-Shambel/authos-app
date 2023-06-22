@@ -197,7 +197,7 @@ export default {
 
       if (!this.v$.$error) {
         try {
-          const response = await axios.post("http://192.168.8.187:3000/api/v1/auth/signup", {
+          const response = await axios.post("http://192.168.8.118:3000/api/v1/auth/signup", {
             email: this.state.email,
             password: this.state.password,
             user_type: this.state.user_type
@@ -206,7 +206,7 @@ export default {
           const userId = response.data.payload.id; // Extract the user ID from the response
           console.log("User ID:", userId);
 
-          localStorage.setItem("token", response.data.payload.token);
+
           localStorage.setItem("user", JSON.stringify({ id: userId })); // Store the user ID in localStorage
           console.log(response.data);
 
